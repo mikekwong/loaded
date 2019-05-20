@@ -1,0 +1,22 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+
+// Font variables
+$roboto: 'Roboto', serif;
+
+// CSS Reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+// Styles
+body {
+  font-family: $roboto;
+}
