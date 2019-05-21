@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../icons/flag.svg'
+import logo from '../icons/logo.svg'
 
 const Navbar = () => {
   return (
@@ -14,7 +14,7 @@ const Navbar = () => {
           <li className='nav-item'>Shipper</li>
           <li className='nav-item'>Become a carrier</li>
           <li className='nav-item'>Login</li>
-          <li className='nav-item'>Signup</li>
+          <li className='nav-item'>Sign Up</li>
         </ul>
       </div>
     </nav>
