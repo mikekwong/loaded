@@ -1,21 +1,21 @@
 import React from 'react'
 
-const Section = props => {
+const SingleShipment = props => {
   return (
-    <div className='section'>
-      <div className='section-content section-routes'>
+    <div className='shipment'>
+      <div className='shipment-content shipment-routes'>
         <h4 />
       </div>
-      <div className='section-content section-pickup'>
+      <div className='shipment-content shipment-pickup'>
         <p>Pick-Up</p>
         <p>Time Stamp</p>
       </div>
-      <div className='section-content section-delivery'>
+      <div className='shipment-content shipment-delivery'>
         <h4>Delivery</h4>
         <h4>Location</h4>
         <p>Timestamp</p>
       </div>
-      <div className='section-content section-specs'>
+      <div className='shipment-content shipment-specs'>
         <div>
           <p>dry van 53</p>
         </div>
@@ -36,4 +36,4 @@ const Section = props => {
   )
 }
 
-export default Section
+export default SingleShipment

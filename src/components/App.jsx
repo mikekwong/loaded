@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Navbar from './Navbar'
-import Section from './Section'
-import SectionNav from './SectionNav'
+import Shipments from './Shipments'
+import SingleShipment from './SingleShipment'
 
-const App = () => {
-  return (
-    <div className='App'>
-      <Navbar />
-      <SectionNav />
-      <Section />
-    </div>
-  )
+import shipments from '../json/shipments'
+
+export default class App extends Component {
+  render () {
+    return (
+      <div className='App'>
+        <Navbar />
+        {shipments.map(shipment => {
+          return <Shipments {...shipment} />
+        })}
+        {/* <SingleShipment /> */}
+      </div>
+    )
+  }
 }
-
-export default App
