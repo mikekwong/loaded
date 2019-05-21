@@ -4,12 +4,13 @@ import dryvan from '../icons/icon_truck_dryvan.svg'
 const Shipments = ({ ...shipment }) => {
   const { fare, equipmentType, equipmentSize, stops } = shipment
   return (
-    <div className='shipments'>
+    <div className='shipments-logistics'>
       <div className='shipments-container'>
         <ul className='shipments-equipment'>
           <li className='shipments-equipment-item'>
             <img className='dryvan' alt='dryvan' src={dryvan} />{' '}
-            {equipmentType === 'DRV' && 'Dry Van'} {equipmentSize}"
+            {equipmentType === 'DRV' ? 'Dry Van' : equipmentType}{' '}
+            {equipmentSize}"
           </li>
           <li className='shipments-equipment-item shipment-cost'>
             ${priceWithCommas(fare)}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
 import Shipments from './Shipments'
-import SingleShipment from './SingleShipment'
+import ShipmentSingle from './ShipmentSingle'
 
 import loadSmart from '../api/loadSmart'
 
@@ -39,19 +39,25 @@ export default class App extends Component {
     const { shipments } = this.state
     return (
       <div className='app'>
-        <Navbar />
-        <div className='shipment-logistics'>
-          {shipments.map(shipment => {
-            return (
-              <Shipments
-                onClick={this.shipmentDetail}
-                key={shipment.id}
-                {...shipment}
-              />
-            )
-          })}
-          <SingleShipment />
-        </div>
+        <nav className='nav'>
+          <Navbar />
+        </nav>
+        <section className='main'>
+          <div className='shipments'>
+            {shipments.map(shipment => {
+              return (
+                <Shipments
+                  onClick={this.shipmentDetail}
+                  key={shipment.id}
+                  {...shipment}
+                />
+              )
+            })}
+          </div>
+          <div className='shipment-single'>
+            <ShipmentSingle />
+          </div>
+        </section>
       </div>
     )
   }

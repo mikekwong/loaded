@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SingleShipment = props => {
+const ShipmentSingle = props => {
   return (
-    <div className='shipment'>
+    <>
       <div className='shipment-content shipment-routes'>
         <h4 />
       </div>
@@ -32,8 +32,8 @@ const SingleShipment = props => {
           <p>stars</p>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
-export default SingleShipment
+export default ShipmentSingle
