@@ -42,9 +42,15 @@ export default class App extends Component {
         <Navbar />
         <div className='shipment-logistics'>
           {shipments.map(shipment => {
-            return <Shipments key={shipment.id} {...shipment} />
+            return (
+              <Shipments
+                onClick={this.shipmentDetail}
+                key={shipment.id}
+                {...shipment}
+              />
+            )
           })}
-          {/* <SingleShipment /> */}
+          <SingleShipment />
         </div>
       </div>
     )

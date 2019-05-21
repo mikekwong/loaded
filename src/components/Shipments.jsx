@@ -8,8 +8,8 @@ const Shipments = ({ ...shipment }) => {
       <div className='shipments-container'>
         <ul className='shipments-equipment'>
           <li className='shipments-equipment-item'>
-            <img className='dryvan' alt='dryvan' src={dryvan} /> {equipmentType}{' '}
-            {equipmentSize}"
+            <img className='dryvan' alt='dryvan' src={dryvan} />{' '}
+            {equipmentType === 'DRV' && 'Dry Van'} {equipmentSize}"
           </li>
           <li className='shipments-equipment-item shipment-cost'>
             ${priceWithCommas(fare)}
@@ -20,22 +20,57 @@ const Shipments = ({ ...shipment }) => {
             <li>
               {stops[0].city}, {stops[0].state} {stops[0].zipcode}
             </li>
-            <li>Wednesday, 01, August, 2015</li>
+            <li>{convertDate(stops[0].windowStart)}</li>
           </ul>
           <div className='shipment-route shipments-arrow'>></div>
           <ul className='shipment-route shipments-deliver'>
             <li>
               {stops[1].city}, {stops[1].state} {stops[1].zipcode}
             </li>
-            <li>Wednesday, 01, August, 2015</li>
+            <li>{convertDate(stops[1].windowEnd)}</li>
           </ul>
         </div>
       </div>
     </div>
   )
 
-  function priceWithCommas (x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  function priceWithCommas (price) {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  }
+
+  function convertDate (dateInput) {
+    const months = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
+    ]
+
+    const days = [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday'
+    ]
+
+    let converted = new Date(dateInput)
+    let day = days[converted.getDay()]
+    let date = converted.getDate()
+    let month = months[converted.getMonth()]
+    let year = converted.getFullYear()
+
+    return `${day}, ${date} ${month}, ${year}`
   }
 }
 

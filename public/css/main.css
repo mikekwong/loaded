@@ -51,13 +51,13 @@ body {
 
 .shipments {
   width: 40vw;
-  background-color: #ebebeb;
+  background-color: #fafafa;
   align-items: center;
   padding: 10px 30px;
   border-right: 1px solid #c5c5c5;
-  border-bottom: 1px solid #c5c5c5;
   justify-content: space-between;
-  font-size: 14px; }
+  font-size: 14px;
+  border-bottom: 1px solid #c5c5c5; }
   .shipments .shipments-container .shipments-deliver {
     align-items: flex-end; }
   .shipments .shipments-container .shipments-equipment {
@@ -74,14 +74,13 @@ body {
       height: 25px;
       width: 25px;
       position: relative;
-      top: 7px;
-      margin-right: 10px; }
+      top: 7px; }
   .shipments .shipments-container .shipments-transfer {
     display: flex; }
   .shipments .shipments-container li {
     list-style-type: none; }
   .shipments .shipments-container .shipment-route {
-    margin-right: 10px; }
+    margin-right: 20px; }
   .shipments .shipments-container .shipment-cost {
     font-weight: 500;
     color: #414141; }
