@@ -1,36 +1,33 @@
 import React from 'react'
-import dryvan from '../icons/icon_truck_dryvan.svg'
+import dryVan from '../icons/icon_truck_dryvan.svg'
 
 const Shipments = ({ ...shipment }) => {
   const { fare, equipmentType, equipmentSize, stops } = shipment
   return (
-    <div className='shipments-logistics'>
-      <div className='shipments-container'>
-        <ul className='shipments-equipment'>
-          <li className='shipments-equipment-item'>
-            <img className='dryvan' alt='dryvan' src={dryvan} />{' '}
-            {equipmentType === 'DRV' ? 'Dry Van' : equipmentType}{' '}
-            {equipmentSize}"
+    <div className='shipments-list-container'>
+      <ul className='shipments-list-equipment'>
+        <li className='shipments-list-equipment-item'>
+          <img className='dryvan' alt='Dry Van' src={dryVan} />{' '}
+          {equipmentType === 'DRV' ? 'Dry Van' : equipmentType} {equipmentSize}"
+        </li>
+        <li className='shipments-list-equipment-item shipment-cost'>
+          ${priceWithCommas(fare)}
+        </li>
+      </ul>
+      <div className='shipments-list-transfer'>
+        <ul className='shipments-list-route shipments-list-pickup'>
+          <li>
+            {stops[0].city}, {stops[0].state} {stops[0].zipcode}
           </li>
-          <li className='shipments-equipment-item shipment-cost'>
-            ${priceWithCommas(fare)}
-          </li>
+          <li>{convertDate(stops[0].windowStart)}</li>
         </ul>
-        <div className='shipments-transfer'>
-          <ul className='shipment-route shipments-pickup'>
-            <li>
-              {stops[0].city}, {stops[0].state} {stops[0].zipcode}
-            </li>
-            <li>{convertDate(stops[0].windowStart)}</li>
-          </ul>
-          <div className='shipment-route shipments-arrow'>></div>
-          <ul className='shipment-route shipments-deliver'>
-            <li>
-              {stops[1].city}, {stops[1].state} {stops[1].zipcode}
-            </li>
-            <li>{convertDate(stops[1].windowEnd)}</li>
-          </ul>
-        </div>
+        <div className='shipments-list-route shipments-list-arrow'>></div>
+        <ul className='shipments-list-route shipments-list-deliver'>
+          <li>
+            {stops[1].city}, {stops[1].state} {stops[1].zipcode}
+          </li>
+          <li>{convertDate(stops[1].windowEnd)}</li>
+        </ul>
       </div>
     </div>
   )

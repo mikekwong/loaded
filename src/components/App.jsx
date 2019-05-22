@@ -43,7 +43,7 @@ export default class App extends Component {
           <Navbar />
         </nav>
         <section className='main'>
-          <div className='shipments'>
+          <div className='shipments-list'>
             {shipments.map(shipment => {
               return (
                 <Shipments
