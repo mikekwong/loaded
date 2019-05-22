@@ -1,72 +1,66 @@
 import React from 'react'
+import PickupDelivery from './PickupDelivery'
+import { addCommas } from './utils'
+
 import palletJack from '../icons/icon_accessorial_pallet_jack.svg'
 import airport from '../icons/icon_accessorial_airport.svg'
 import lumper from '../icons/icon_accessorial_lumper.svg'
 import liftGate from '../icons/icon_accessorial_lift_gate.svg'
 import dryVan from '../icons/icon_truck_dryvan.svg'
 
-const ShipmentSingle = props => {
+const ShipmentSingle = ({
+  id,
+  shipperRatingScore,
+  commodity,
+  stops,
+  weight,
+  equipmentType,
+  equipmentSize,
+  map
+}) => {
   return (
-    <div className='shipment-single-container'>
-      <div className='shipment-single-content shipment-single-routes'>
+    <div
+      // onClick={props.shipmentDetail(id)}
+      className='shipment-single-container'
+    >
+      <div className='shipment-single-content shipment-single-cities'>
         <p>
-          Jersey City, NJ <span>></span> Bermuda, NJ
+          {stops[0].city} {stops[0].state} <span>></span> {stops[1].city}{' '}
+          {stops[1].state}
         </p>
       </div>
-      <div className='shipment-single-content shipment-single-pickup'>
-        <p>Pick-Up</p>
-        <p>Jersey City, NJ 17011</p>
-        <p>Thursday, 14 July, 2015</p>
-        <ul>
-          <li>
-            <img
-              className='shipment-single-icon'
-              src={palletJack}
-              alt='Pallet Jack'
-            />
-            Pallet Jack
-          </li>
-          <li>
-            <img className='shipment-single-icon' src={airport} alt='Airport' />
-            Airport
-          </li>
-        </ul>
-      </div>
-      <div className='shipment-single-content shipment-single-delivery'>
-        <p>Delivery</p>
-        <ul>
-          <li>
-            <img className='shipment-single-icon' src={lumper} alt='Lumper' />
-            Pallet Jack
-          </li>
-          <li>
-            <img
-              className='shipment-single-icon'
-              src={liftGate}
-              alt='Lift Gate'
-            />
-            Airport
-          </li>
-        </ul>
-      </div>
+      <PickupDelivery
+        pickupDelivery={stops[0]}
+        icon1={palletJack}
+        icon2={airport}
+        icon1Name={'Pallet Jack'}
+        icon2Name={'Airport'}
+      />
+      <PickupDelivery
+        pickupDelivery={stops[1]}
+        icon1={lumper}
+        icon2={liftGate}
+        icon1Name={'Lumper'}
+        icon2Name={'Lift Gate'}
+      />
       <div className='shipment-single-content shipment-single-specs'>
         <div>
           <p>
             <img className='shipment-single-icon' src={dryVan} alt='Dry Van' />
-            dry van 53
+            {equipmentType} {equipmentSize}"
           </p>
         </div>
         <div>
           <p>COMMODITY</p>
-          <p>Apples</p>
+          <p>{commodity}</p>
         </div>
         <div>
           <p>WEIGHT</p>
-          <p>55,000 lb</p>
+          <p>{addCommas(weight)} lb</p>
         </div>
         <div>
           <p>SHIPPER RATING</p>
-          <p>stars</p>
+          <p>{shipperRatingScore}</p>
         </div>
       </div>
     </div>

@@ -10,33 +10,48 @@ import loadSmart from '../api/loadSmart'
 export default class App extends Component {
   constructor () {
     super()
-    this.state = { shipments: [] }
-  }
-
-  async componentDidMount () {
-    try {
-      const { data } = await loadSmart.get('shipments.json')
-      this.setState({
-        shipments: data
-      })
-    } catch (error) {
-      console.error(error)
+    this.state = {
+      isLoading: true,
+      shipments: [],
+      shipmentDetails: []
     }
   }
 
-  async shipmentDetail (shipNumber) {
+  async getAllShipments () {
     try {
-      const { data } = await loadSmart.get(`${shipNumber}`)
+      const [allShipments, singleShipment] = await Promise.all([
+        loadSmart.get('shipments.json'),
+        loadSmart.get('shipment-1.json')
+      ])
+      // console.log(allShipments.data, singleShipment.data)
       this.setState({
-        shipments: data
+        isLoading: false,
+        shipments: allShipments.data,
+        shipmentDetails: singleShipment.data
       })
     } catch (error) {
-      console.error(error)
+      this.setState({ error, isLoading: false })
     }
   }
+
+  componentDidMount () {
+    this.getAllShipments()
+  }
+
+  // async shipmentDetail (shipNumber) {
+  //   try {
+  //     const { data } = await loadSmart.get(`shipment-${shipNumber}.json`)
+  //     this.setState({
+  //       shipmentDetails: data
+  //     })
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  // }
 
   render () {
-    const { shipments } = this.state
+    const { shipments, shipmentDetails, isLoading } = this.state
+    console.log(shipmentDetails)
     return (
       <div className='app'>
         <nav className='nav'>
@@ -47,16 +62,23 @@ export default class App extends Component {
             {shipments.map(shipment => {
               return (
                 <Shipments
-                  onClick={this.shipmentDetail}
+                  // shipmentDetail={() => this.shipmentDetail()}
                   key={shipment.id}
                   {...shipment}
                 />
               )
             })}
           </div>
-          <div className='shipment-single'>
-            <ShipmentSingle />
-          </div>
+          {!isLoading ? (
+            <div
+              // onClick={() => this.shipmentDetail(1)}
+              className='shipment-single'
+            >
+              <ShipmentSingle key={shipmentDetails.id} {...shipmentDetails} />
+            </div>
+          ) : (
+            <p>Loading...</p>
+          )}
         </section>
       </div>
     )
