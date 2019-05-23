@@ -23,13 +23,14 @@ const ShipmentSingle = ({
       // onClick={props.shipmentDetail(id)}
       className='shipment-single-container'
     >
-      <div className='shipment-single-content shipment-single-cities'>
+      <div className='shipment-single-section shipment-single-cities'>
         <p>
           {stops[0].city} {stops[0].state} <span>></span> {stops[1].city}{' '}
           {stops[1].state}
         </p>
       </div>
       <ShipmentFromTo
+        type={'Pick-Up'}
         pickupDelivery={stops[0]}
         icon1={palletJack}
         icon2={airport}
@@ -37,17 +38,22 @@ const ShipmentSingle = ({
         icon2Name={'Airport'}
       />
       <ShipmentFromTo
+        type={'Delivery'}
         pickupDelivery={stops[1]}
         icon1={lumper}
         icon2={liftGate}
         icon1Name={'Lumper'}
         icon2Name={'Lift Gate'}
       />
-      <div className='shipment-single-content shipment-single-specs'>
+      <div className='shipment-single-section shipment-single-map'>
+        <img className='shipment-single-map-image' src={map} />
+      </div>
+      <d iv className='shipment-single-section shipment-single-specs'>
         <div>
           <p>
             <img className='shipment-single-icon' src={dryVan} alt='Dry Van' />
-            {equipmentType} {equipmentSize}"
+            {equipmentType === 'DRV' ? 'Dry Van' : equipmentType}{' '}
+            {equipmentSize}"
           </p>
         </div>
         <div>
@@ -62,7 +68,7 @@ const ShipmentSingle = ({
           <p>SHIPPER RATING</p>
           <p>{shipperRatingScore}</p>
         </div>
-      </div>
+      </d>
     </div>
   )
 }

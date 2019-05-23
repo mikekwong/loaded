@@ -11,8 +11,8 @@ const Shipments = ({ fare, equipmentType, equipmentSize, stops }) => {
           <img className='dryvan' alt='Dry Van' src={dryVan} />{' '}
           {equipmentType === 'DRV' ? 'Dry Van' : equipmentType} {equipmentSize}"
         </li>
-        <li className='shipments-list-equipment-item shipment-cost'>
-          {addCommas(fare)}
+        <li className='shipments-list-equipment-item shipments-list-cost'>
+          ${addCommas(fare)}
         </li>
       </ul>
       <div className='shipments-list-transfer'>

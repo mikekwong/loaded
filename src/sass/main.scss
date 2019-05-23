@@ -138,8 +138,8 @@ body {
   }
 
   .shipments-list-cost {
-    font-weight: 500;
     color: $dark-gray;
+    font-weight: 500;
   }
 
   .shipments-list-arrow {
@@ -173,6 +173,10 @@ body {
     margin: 60px;
     display: flex;
     flex-direction: column;
+
+    .shipment-single-section {
+      border-bottom: 1px solid gray;
+    }
 
     .shipment-single-content {
       width: 100%;

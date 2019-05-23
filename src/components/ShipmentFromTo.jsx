@@ -3,6 +3,7 @@ import { convertDate } from '../utils'
 
 const PickupDelivery = ({
   pickupDelivery,
+  type,
   icon1,
   icon2,
   icon1Name,
@@ -10,7 +11,7 @@ const PickupDelivery = ({
 }) => {
   return (
     <div className='shipment-single-content shipment-single-pickup-delivery'>
-      <p>Pick-Up</p>
+      <p>{type}</p>
       <p>
         {pickupDelivery.city}, {pickupDelivery.state} {pickupDelivery.zipcode}
       </p>
