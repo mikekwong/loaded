@@ -23,7 +23,6 @@ export default class App extends Component {
         loadSmart.get('shipments.json'),
         loadSmart.get('shipment-1.json')
       ])
-      // console.log(allShipments.data, singleShipment.data)
       this.setState({
         isLoading: false,
         shipments: allShipments.data,
@@ -51,7 +50,6 @@ export default class App extends Component {
 
   render () {
     const { shipments, shipmentDetails, isLoading } = this.state
-    console.log(shipmentDetails)
     return (
       <div className='app'>
         <nav className='nav'>

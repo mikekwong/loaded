@@ -1,6 +1,6 @@
 import React from 'react'
-import PickupDelivery from './PickupDelivery'
-import { addCommas } from './utils'
+import ShipmentFromTo from './ShipmentFromTo'
+import { addCommas } from '../utils'
 
 import palletJack from '../icons/icon_accessorial_pallet_jack.svg'
 import airport from '../icons/icon_accessorial_airport.svg'
@@ -29,14 +29,14 @@ const ShipmentSingle = ({
           {stops[1].state}
         </p>
       </div>
-      <PickupDelivery
+      <ShipmentFromTo
         pickupDelivery={stops[0]}
         icon1={palletJack}
         icon2={airport}
         icon1Name={'Pallet Jack'}
         icon2Name={'Airport'}
       />
-      <PickupDelivery
+      <ShipmentFromTo
         pickupDelivery={stops[1]}
         icon1={lumper}
         icon2={liftGate}
