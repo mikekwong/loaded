@@ -176,63 +176,57 @@ body {
     display: flex;
     flex-direction: column;
 
+    .shipment-single-cities {
+      font-size: 17px;
+      font-weight: 500;
+      color: rgb(49, 49, 49);
+      padding-bottom: 20px;
+
+      span {
+        color: $light-gray;
+        margin: 0 10px 0 10px;
+      }
+    }
+
     .shipment-single-section {
       border-bottom: $border-stroke;
 
-      .shipment-single-cities {
-        font-size: 17px;
-        font-weight: 500;
-        color: rgb(49, 49, 49);
-        padding-bottom: 20px;
-
-        span {
-          color: $light-gray;
-          margin: 0 10px 0 10px;
-        }
-      }
-
-      .shipment-single-wrapper {
+      .shipment-single-pickup-delivery > ul {
         display: flex;
         flex-direction: row;
-        margin-bottom: 10px;
+      }
+    }
 
-        .shipment-single-number {
-          width: 10px;
-          margin: 39px 10px 0 0;
-          color: $white;
-          border-radius: 50px;
-          height: 15px;
-          width: 15px;
-          font-size: 13px;
-          text-align: center;
-          padding: 2.5px;
-          background-color: $dark-gray;
-        }
+    .shipment-single-wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 50%;
+      margin-bottom: 10px;
 
-        .shipment-single-pickup-delivery {
-          padding: 20px 0;
-          width: 50%;
-          border-bottom: $border-stroke;
-        }
+      .shipment-single-number {
+        width: 10px;
+        margin: 39px 10px 0 0;
+        color: $white;
+        border-radius: 50px;
+        height: 15px;
+        width: 15px;
+        font-size: 13px;
+        text-align: center;
+        padding: 2.5px;
+        background-color: $dark-gray;
+      }
 
-        .shipment-single-map {
-          width: 200px;
-          margin-left: 20px;
-        }
+      .shipment-single-pickup-delivery {
+        padding: 20px 0;
+        width: 50%;
+        border-bottom: $border-stroke;
+      }
+    }
 
-        .shipment-single-routes {
-          display: flex;
-          flex-direction: row;
-        }
-
-        ul {
-          display: flex;
-          flex-direction: row;
-
-          li {
-            flex-direction: column;
-          }
-        }
+    .shipment-single-map {
+      .shipment-single-map-image {
+        width: 40%;
+        // margin-left: 20px;
       }
     }
 
