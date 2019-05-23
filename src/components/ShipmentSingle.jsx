@@ -25,28 +25,33 @@ const ShipmentSingle = ({
     >
       <div className='shipment-single-section shipment-single-cities'>
         <p>
-          {stops[0].city} {stops[0].state} <span>></span> {stops[1].city}{' '}
-          {stops[1].state}
+          {stops[0].city}, {stops[0].state}
+          <span>></span>
+          {stops[1].city}, {stops[1].state}
         </p>
       </div>
-      <ShipmentFromTo
-        type={'Pick-Up'}
-        pickupDelivery={stops[0]}
-        icon1={palletJack}
-        icon2={airport}
-        icon1Name={'Pallet Jack'}
-        icon2Name={'Airport'}
-      />
-      <ShipmentFromTo
-        type={'Delivery'}
-        pickupDelivery={stops[1]}
-        icon1={lumper}
-        icon2={liftGate}
-        icon1Name={'Lumper'}
-        icon2Name={'Lift Gate'}
-      />
-      <div className='shipment-single-section shipment-single-map'>
-        <img className='shipment-single-map-image' alt='map' src={map} />
+      <div className='shipment-single-section shipment-single-routes'>
+        <ShipmentFromTo
+          number={'1'}
+          type={'Pick-Up'}
+          pickupDelivery={stops[0]}
+          icon1={palletJack}
+          icon2={airport}
+          icon1Name={'Pallet Jack'}
+          icon2Name={'Airport'}
+        />
+        <ShipmentFromTo
+          number={'2'}
+          type={'Delivery'}
+          pickupDelivery={stops[1]}
+          icon1={lumper}
+          icon2={liftGate}
+          icon1Name={'Lumper'}
+          icon2Name={'Lift Gate'}
+        />
+        <div className='shipment-single-section shipment-single-map'>
+          <img className='shipment-single-map-image' alt='map' src={map} />
+        </div>
       </div>
       <div className='shipment-single-section shipment-single-specs'>
         <div>
