@@ -46,9 +46,9 @@ const ShipmentSingle = ({
         icon2Name={'Lift Gate'}
       />
       <div className='shipment-single-section shipment-single-map'>
-        <img className='shipment-single-map-image' src={map} />
+        <img className='shipment-single-map-image' alt='map' src={map} />
       </div>
-      <d iv className='shipment-single-section shipment-single-specs'>
+      <div className='shipment-single-section shipment-single-specs'>
         <div>
           <p>
             <img className='shipment-single-icon' src={dryVan} alt='Dry Van' />
@@ -68,7 +68,7 @@ const ShipmentSingle = ({
           <p>SHIPPER RATING</p>
           <p>{shipperRatingScore}</p>
         </div>
-      </d>
+      </div>
     </div>
   )
 }

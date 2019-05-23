@@ -12,6 +12,7 @@ export default class App extends Component {
     super()
     this.state = {
       isLoading: true,
+      error: null,
       shipments: [],
       shipmentDetails: []
     }
