@@ -186,40 +186,46 @@ body {
         color: $light-gray;
         margin: 0 10px 0 10px;
       }
+
+      .shipment-single-routes:nth-child(2) {
+        border-bottom: $border-stroke;
+      }
     }
 
     .shipment-single-section {
       border-bottom: $border-stroke;
 
-      .shipment-single-pickup-delivery > ul {
+      .shipment-single-wrapper {
         display: flex;
         flex-direction: row;
-      }
-    }
+        margin-bottom: 10px;
 
-    .shipment-single-wrapper {
-      display: flex;
-      flex-direction: row;
-      width: 50%;
-      margin-bottom: 10px;
+        .shipment-single-number {
+          width: 10px;
+          margin: 39px 10px 0 0;
+          color: $white;
+          border-radius: 50px;
+          height: 15px;
+          width: 15px;
+          font-size: 13px;
+          text-align: center;
+          padding: 2.5px;
+          background-color: $dark-gray;
+        }
 
-      .shipment-single-number {
-        width: 10px;
-        margin: 39px 10px 0 0;
-        color: $white;
-        border-radius: 50px;
-        height: 15px;
-        width: 15px;
-        font-size: 13px;
-        text-align: center;
-        padding: 2.5px;
-        background-color: $dark-gray;
-      }
+        .shipment-single-pickup-delivery {
+          padding: 20px 0;
+          width: 50%;
 
-      .shipment-single-pickup-delivery {
-        padding: 20px 0;
-        width: 50%;
-        border-bottom: $border-stroke;
+          ul {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+
+        .shipment-single-pickup-delivery1 {
+          border-bottom: $border-stroke;
+        }
       }
     }
 

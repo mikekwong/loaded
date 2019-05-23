@@ -15,7 +15,9 @@ const PickupDelivery = ({
       <div className='shipment-single-content shipment-single-number'>
         {number}
       </div>
-      <div className='shipment-single-content shipment-single-pickup-delivery'>
+      <div
+        className={`shipment-single-content shipment-single-pickup-delivery shipment-single-pickup-delivery${number}`}
+      >
         <p>{type}</p>
         <p>
           {pickupDelivery.city}, {pickupDelivery.state} {pickupDelivery.zipcode}

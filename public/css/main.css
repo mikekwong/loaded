@@ -114,31 +114,33 @@ body {
       .shipment-single .shipment-single-container .shipment-single-cities span {
         color: #8d8d8d;
         margin: 0 10px 0 10px; }
+      .shipment-single .shipment-single-container .shipment-single-cities .shipment-single-routes:nth-child(2) {
+        border-bottom: 1px solid #c5c5c5; }
     .shipment-single .shipment-single-container .shipment-single-section {
       border-bottom: 1px solid #c5c5c5; }
-      .shipment-single .shipment-single-container .shipment-single-section .shipment-single-pickup-delivery > ul {
+      .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper {
         display: flex;
-        flex-direction: row; }
-    .shipment-single .shipment-single-container .shipment-single-wrapper {
-      display: flex;
-      flex-direction: row;
-      width: 50%;
-      margin-bottom: 10px; }
-      .shipment-single .shipment-single-container .shipment-single-wrapper .shipment-single-number {
-        width: 10px;
-        margin: 39px 10px 0 0;
-        color: #fff;
-        border-radius: 50px;
-        height: 15px;
-        width: 15px;
-        font-size: 13px;
-        text-align: center;
-        padding: 2.5px;
-        background-color: #414141; }
-      .shipment-single .shipment-single-container .shipment-single-wrapper .shipment-single-pickup-delivery {
-        padding: 20px 0;
-        width: 50%;
-        border-bottom: 1px solid #c5c5c5; }
+        flex-direction: row;
+        margin-bottom: 10px; }
+        .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-number {
+          width: 10px;
+          margin: 39px 10px 0 0;
+          color: #fff;
+          border-radius: 50px;
+          height: 15px;
+          width: 15px;
+          font-size: 13px;
+          text-align: center;
+          padding: 2.5px;
+          background-color: #414141; }
+        .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery {
+          padding: 20px 0;
+          width: 50%; }
+          .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery ul {
+            display: flex;
+            flex-direction: row; }
+        .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery1 {
+          border-bottom: 1px solid #c5c5c5; }
     .shipment-single .shipment-single-container .shipment-single-map .shipment-single-map-image {
       width: 40%; }
     .shipment-single .shipment-single-container .shipment-single-content {
