@@ -75,20 +75,23 @@ body {
 .shipments-list {
   width: 40%;
   // margin: 0 auto;
+  // &:nth-child(3).shipments-list-transfer {
+  //   border-bottom: 1px solid red;
+  // }
 }
-
 .shipments-list-container {
   // align-items: flex-end;
   // margin-left: 5vw;
   // max-width: 1280px;
   // width: 40vw;
+  cursor: pointer;
   background-color: rgb(250, 250, 250);
   // width: 40vw;
   align-items: center;
   padding: 10px 30px;
-  border-right: $border-stroke;
   justify-content: space-between;
   font-size: 14px;
+  border-right: $border-stroke;
 
   // &:not(:last-child) {
   border-bottom: $border-stroke;
@@ -162,12 +165,6 @@ body {
       color: $light-gray;
     }
   }
-}
-
-.shipment-select {
-  background-color: #fff;
-  border-left: $border-stroke;
-  border-right: none;
 }
 
 .shipment-single {
@@ -254,6 +251,22 @@ body {
       width: 20px;
     }
   }
+}
+
+.tab-list {
+  // border-right: 1px solid #ccc;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+  background-color: white;
+  border-right: 1px solid #fff;
 }
 
 @media all and (min-width: 320px) {

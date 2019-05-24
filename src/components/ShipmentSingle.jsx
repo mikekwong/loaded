@@ -9,28 +9,27 @@ import liftGate from '../icons/icon_accessorial_lift_gate.svg'
 import dryVan from '../icons/icon_truck_dryvan.svg'
 
 const ShipmentSingle = ({
-  id,
   shipperRatingScore,
   commodity,
   stops,
   weight,
   equipmentType,
   equipmentSize,
-  map
+  map,
 }) => {
   return (
     <div
       // onClick={props.shipmentDetail(id)}
-      className='shipment-single-container'
+      className="shipment-single-container"
     >
-      <div className='shipment-single-section shipment-single-cities'>
+      <div className="shipment-single-section shipment-single-cities">
         <p>
           {stops[0].city}, {stops[0].state}
           <span>></span>
           {stops[1].city}, {stops[1].state}
         </p>
       </div>
-      <div className='shipment-single-section shipment-single-routes'>
+      <div className="shipment-single-section shipment-single-routes">
         <ShipmentFromTo
           number={'1'}
           type={'Pick-Up'}
@@ -49,14 +48,14 @@ const ShipmentSingle = ({
           icon1Name={'Lumper'}
           icon2Name={'Lift Gate'}
         />
-        <div className='shipment-single-section shipment-single-map'>
-          <img className='shipment-single-map-image' alt='map' src={map} />
+        <div className="shipment-single-section shipment-single-map">
+          <img className="shipment-single-map-image" alt="map" src={map} />
         </div>
       </div>
-      <div className='shipment-single-section shipment-single-specs'>
+      <div className="shipment-single-section shipment-single-specs">
         <div>
           <p>
-            <img className='shipment-single-icon' src={dryVan} alt='Dry Van' />
+            <img className="shipment-single-icon" src={dryVan} alt="Dry Van" />
             {equipmentType === 'DRV' ? 'Dry Van' : equipmentType}{' '}
             {equipmentSize}"
           </p>

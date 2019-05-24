@@ -9,83 +9,96 @@ import loadSmart from '../api/loadSmart'
 // import shipments from '../json/shipments'
 
 export default class App extends Component {
-  constructor () {
+  constructor() {
     super()
     this.state = {
-      active: false,
       isLoading: true,
       error: null,
       shipments: [],
-      shipmentDetails: []
+      shipmentDetails: [],
     }
   }
 
-  async getAllShipments () {
+  async getAllShipments() {
     try {
       const [allShipments, singleShipment] = await Promise.all([
         loadSmart.get('shipments.json'),
-        loadSmart.get('shipment-1.json')
+        loadSmart.get('shipment-1.json'),
       ])
       this.setState({
         isLoading: false,
         shipments: allShipments.data,
-        shipmentDetails: singleShipment.data
+        shipmentDetails: singleShipment.data,
       })
     } catch (error) {
       this.setState({ error, isLoading: false })
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.getAllShipments()
   }
 
-  // async shipmentDetail (shipNumber) {
-  //   try {
-  //     const { data } = await loadSmart.get(`shipment-${shipNumber}.json`)
-  //     this.setState({
-  //       shipmentDetails: data
-  //     })
-  //   } catch (error) {
-  //     console.error(error)
-  //   }
-  // }
-
-  toggleShipment = e => {
-    const currentState = this.state.active
-    this.setState({ active: !currentState })
+  async getShipmentDetail(shipNumber) {
+    try {
+      const { data } = await loadSmart.get(`shipment-${shipNumber}.json`)
+      this.setState({
+        shipmentDetails: data,
+      })
+    } catch (error) {
+      this.setState({ error, isLoading: false })
+    }
   }
 
-  render () {
+  render() {
     const { shipments, shipmentDetails, isLoading } = this.state
     return (
-      <div className='app'>
-        <nav className='nav'>
+      <div className="app">
+        <nav className="nav">
           <Navbar />
         </nav>
-        <section className='main'>
-          <div className='shipments-list'>
+        <section className="main">
+          {/* <div className="shipments-list"> */}
+          {/* {shipments.map(shipment => {
+              return (
+                <Shipments
+                  // shipmentDetail={() => this.shipmentDetail()}
+                  toggleShipment={this.toggleShipment}
+                  active={this.state.active}
+                  key={shipment.id}
+                  {...shipment}
+                />
+              )
+            })} */}
+          {/* </div> */}
+          {!isLoading ? (
             <ShipTabs>
               {shipments.map(shipment => {
                 return (
-                  <Shipments
-                    // shipmentDetail={() => this.shipmentDetail()}
-                    toggleShipment={this.toggleShipment}
-                    active={this.state.active}
+                  <div
                     key={shipment.id}
-                    {...shipment}
-                  />
+                    label={
+                      <Shipments
+                        // shipmentDetail={() => this.shipmentDetail()}
+                        active={this.state.active}
+                        key={shipment.id}
+                        {...shipment}
+                      />
+                    }
+                  >
+                    <div
+                      // onClick={() => this.shipmentDetail(1)}
+                      className="shipment-single"
+                    >
+                      <ShipmentSingle
+                        key={shipmentDetails.id}
+                        {...shipmentDetails}
+                      />
+                    </div>
+                  </div>
                 )
               })}
             </ShipTabs>
-          </div>
-          {!isLoading ? (
-            <div
-              // onClick={() => this.shipmentDetail(1)}
-              className='shipment-single'
-            >
-              <ShipmentSingle key={shipmentDetails.id} {...shipmentDetails} />
-            </div>
           ) : (
             <p>Loading...</p>
           )}
