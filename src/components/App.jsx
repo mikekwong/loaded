@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Navbar from './Navbar'
 import Shipments from './Shipments'
 import ShipmentSingle from './ShipmentSingle'
+import ShipTabs from './ShipTabs'
 
 import loadSmart from '../api/loadSmart'
 
@@ -11,6 +12,7 @@ export default class App extends Component {
   constructor () {
     super()
     this.state = {
+      active: false,
       isLoading: true,
       error: null,
       shipments: [],
@@ -49,6 +51,11 @@ export default class App extends Component {
   //   }
   // }
 
+  toggleShipment = e => {
+    const currentState = this.state.active
+    this.setState({ active: !currentState })
+  }
+
   render () {
     const { shipments, shipmentDetails, isLoading } = this.state
     return (
@@ -58,15 +65,19 @@ export default class App extends Component {
         </nav>
         <section className='main'>
           <div className='shipments-list'>
-            {shipments.map(shipment => {
-              return (
-                <Shipments
-                  // shipmentDetail={() => this.shipmentDetail()}
-                  key={shipment.id}
-                  {...shipment}
-                />
-              )
-            })}
+            <ShipTabs>
+              {shipments.map(shipment => {
+                return (
+                  <Shipments
+                    // shipmentDetail={() => this.shipmentDetail()}
+                    toggleShipment={this.toggleShipment}
+                    active={this.state.active}
+                    key={shipment.id}
+                    {...shipment}
+                  />
+                )
+              })}
+            </ShipTabs>
           </div>
           {!isLoading ? (
             <div

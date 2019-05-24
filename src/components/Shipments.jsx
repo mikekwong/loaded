@@ -3,9 +3,23 @@ import dryVan from '../icons/icon_truck_dryvan.svg'
 import { addCommas } from '../utils'
 import ShipmentsFromTo from './ShipmentsFromTo'
 
-const Shipments = ({ fare, equipmentType, equipmentSize, stops }) => {
+const Shipments = ({
+  active,
+  toggleShipment,
+  fare,
+  equipmentType,
+  equipmentSize,
+  stops
+}) => {
   return (
-    <div className='shipments-list-container'>
+    <div
+      onClick={toggleShipment}
+      className={
+        active
+          ? 'shipments-list-container shipment-select'
+          : 'shipments-list-container'
+      }
+    >
       <ul className='shipments-list-equipment'>
         <li className='shipments-list-equipment-item'>
           <img className='dryvan' alt='Dry Van' src={dryVan} />{' '}
