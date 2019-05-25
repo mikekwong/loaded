@@ -9,8 +9,8 @@ import loadSmart from '../api/loadSmart'
 // import shipments from '../json/shipments'
 
 export default class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       isLoading: true,
       error: null,
@@ -39,10 +39,11 @@ export default class App extends Component {
     this.getAllShipments()
   }
 
-  async getShipmentDetail(shipNumber) {
+  async selectShipment(id) {
     try {
-      const { data } = await loadSmart.get(`shipment-${shipNumber}.json`)
+      const { data } = await loadSmart.get(`shipment-${id}.json`)
       this.setState({
+        isLoading: false,
         shipmentDetails: data,
       })
     } catch (error) {
@@ -63,12 +64,13 @@ export default class App extends Component {
               {shipments.map(shipment => {
                 return (
                   <div
+                    onClick={() => this.selectShipment(shipment.id)}
                     key={shipment.id}
                     label={
                       <Shipments
                         // shipmentDetail={() => this.shipmentDetail()}
                         active={this.state.active}
-                        key={shipment.id}
+                        // key={shipment.id}
                         {...shipment}
                       />
                     }
