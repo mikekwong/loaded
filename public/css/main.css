@@ -50,7 +50,7 @@ body {
   flex-direction: row;
   justify-content: center; }
 
-.shipments-list {
+.shipments-all {
   width: 40%; }
 
 .shipments-list-container {

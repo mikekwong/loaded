@@ -19,26 +19,28 @@ export default class ShipTabs extends Component {
     } = this
 
     return (
-      <div className="shipments-list">
-        {children.map(child => {
-          const { label } = child.props
-
-          return (
-            <ShipTab
-              activeTab={activeTab}
-              key={label}
-              label={label}
-              onClick={onClickShipTab}
-            />
-          )
-        })}
-        <div className="tab-content">
+      <>
+        <div className="shipments-all">
           {children.map(child => {
-            if (child.props.label !== activeTab) return undefined
-            return child.props.children
+            const { label } = child.props
+
+            return (
+              <ShipTab
+                activeTab={activeTab}
+                key={label}
+                label={label}
+                onClick={onClickShipTab}
+              />
+            )
           })}
         </div>
-      </div>
+        {/* <div className="tab-content"> */}
+        {children.map(child => {
+          if (child.props.label !== activeTab) return undefined
+          return child.props.children
+        })}
+        {/* </div> */}
+      </>
     )
   }
 }
