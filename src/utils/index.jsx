@@ -1,3 +1,12 @@
+export const formatAccessorial = str => {
+  const word = str.split('_')
+
+  for (let i = 0; i < word.length; i++) {
+    word[i] = word[i].charAt(0).toUpperCase() + word[i].slice(1)
+  }
+  return word.join(' ')
+}
+
 export const addCommas = price => {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
@@ -15,7 +24,7 @@ export const convertDate = dateInput => {
     'September',
     'October',
     'November',
-    'December'
+    'December',
   ]
 
   const days = [
@@ -25,14 +34,14 @@ export const convertDate = dateInput => {
     'Thursday',
     'Friday',
     'Saturday',
-    'Sunday'
+    'Sunday',
   ]
 
-  let converted = new Date(dateInput)
-  let day = days[converted.getDay()]
-  let date = converted.getDate()
-  let month = months[converted.getMonth()]
-  let year = converted.getFullYear()
+  const converted = new Date(dateInput)
+  const day = days[converted.getDay()]
+  const date = converted.getDate()
+  const month = months[converted.getMonth()]
+  const year = converted.getFullYear()
 
   return `${day}, ${date} ${month}, ${year}`
 }

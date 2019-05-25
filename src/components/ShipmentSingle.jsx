@@ -36,8 +36,8 @@ const ShipmentSingle = ({
           pickupDelivery={stops[0]}
           icon1={palletJack}
           icon2={airport}
-          icon1Name={'Pallet Jack'}
-          icon2Name={'Airport'}
+          icon1Name={stops[0].accessorials[0]}
+          icon2Name={stops[0].accessorials[1]}
         />
         <ShipmentFromTo
           number={'2'}
@@ -45,8 +45,8 @@ const ShipmentSingle = ({
           pickupDelivery={stops[1]}
           icon1={lumper}
           icon2={liftGate}
-          icon1Name={'Lumper'}
-          icon2Name={'Lift Gate'}
+          icon1Name={stops[1].accessorials[0]}
+          icon2Name={stops[1].accessorials[1]}
         />
         <div className="shipment-single-section shipment-single-map">
           <img className="shipment-single-map-image" alt="map" src={map} />

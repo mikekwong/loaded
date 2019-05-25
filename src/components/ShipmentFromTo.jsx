@@ -1,5 +1,5 @@
 import React from 'react'
-import { convertDate } from '../utils'
+import { convertDate, formatAccessorial } from '../utils'
 
 const PickupDelivery = ({
   number,
@@ -8,11 +8,11 @@ const PickupDelivery = ({
   icon1,
   icon2,
   icon1Name,
-  icon2Name
+  icon2Name,
 }) => {
   return (
-    <div className='shipment-single-content shipment-single-wrapper'>
-      <div className='shipment-single-content shipment-single-number'>
+    <div className="shipment-single-content shipment-single-wrapper">
+      <div className="shipment-single-content shipment-single-number">
         {number}
       </div>
       <div
@@ -26,15 +26,15 @@ const PickupDelivery = ({
         <ul>
           <li>
             <img
-              className='shipment-single-icon'
+              className="shipment-single-icon"
               src={icon1}
-              alt='Pallet Jack'
+              alt="Pallet Jack"
             />
-            {icon1Name}
+            {formatAccessorial(icon1Name)}
           </li>
           <li>
-            <img className='shipment-single-icon' src={icon2} alt='Airport' />
-            {icon2Name}
+            <img className="shipment-single-icon" src={icon2} alt="Airport" />
+            {formatAccessorial(icon2Name)}
           </li>
         </ul>
       </div>

@@ -58,19 +58,6 @@ export default class App extends Component {
           <Navbar />
         </nav>
         <section className="main">
-          {/* <div className="shipments-list"> */}
-          {/* {shipments.map(shipment => {
-              return (
-                <Shipments
-                  // shipmentDetail={() => this.shipmentDetail()}
-                  toggleShipment={this.toggleShipment}
-                  active={this.state.active}
-                  key={shipment.id}
-                  {...shipment}
-                />
-              )
-            })} */}
-          {/* </div> */}
           {!isLoading ? (
             <ShipTabs>
               {shipments.map(shipment => {
