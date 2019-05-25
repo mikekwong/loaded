@@ -88,14 +88,23 @@ body {
   background-color: rgb(250, 250, 250);
   // width: 40vw;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px 30px 15px 30px;
   justify-content: space-between;
   font-size: 14px;
   border-right: $border-stroke;
 
-  // &:not(:last-child) {
-  border-bottom: $border-stroke;
-  // }
+  &:nth-child(n + 1):nth-child(-n + 2) {
+    border-bottom: $border-stroke;
+  }
+
+  &:nth-child(3) {
+    padding-bottom: 100vh;
+  }
+
+  &:nth-child(3) .shipments-list-transfer {
+    padding-bottom: 20px;
+    border-bottom: $border-stroke;
+  }
 
   .shipments-list-deliver {
     align-items: flex-end;

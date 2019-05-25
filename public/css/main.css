@@ -57,11 +57,17 @@ body {
   cursor: pointer;
   background-color: #fafafa;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px 30px 15px 30px;
   justify-content: space-between;
   font-size: 14px;
-  border-right: 1px solid #c5c5c5;
-  border-bottom: 1px solid #c5c5c5; }
+  border-right: 1px solid #c5c5c5; }
+  .shipments-list-container:nth-child(n + 1):nth-child(-n + 2) {
+    border-bottom: 1px solid #c5c5c5; }
+  .shipments-list-container:nth-child(3) {
+    padding-bottom: 100vh; }
+  .shipments-list-container:nth-child(3) .shipments-list-transfer {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c5c5c5; }
   .shipments-list-container .shipments-list-deliver {
     align-items: flex-end; }
   .shipments-list-container .shipments-list-equipment {
