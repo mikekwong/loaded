@@ -11,42 +11,42 @@ import React, { Component } from 'react'
 import loadSmart from '../api/loadSmart'
 
 export default class ShipmentSingle extends Component {
-  constructor () {
+  constructor() {
     super()
     this.state = {
       isLoading: true,
       error: null,
-      shipmentDetails: []
+      shipmentDetails: [],
     }
   }
 
-  async getShipmentDetails () {
+  async getShipmentDetails() {
     const { id } = this.props.match.params
     try {
       const { data } = await loadSmart.get(`shipment-${id}.json`)
       this.setState({
         shipmentDetails: data,
-        isLoading: false
+        isLoading: false,
       })
     } catch (error) {
       this.setState({
         error,
-        isLoading: false
+        isLoading: false,
       })
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.getShipmentDetails()
   }
 
-  componentDidUpdate (prevProps) {
+  componentDidUpdate(prevProps) {
     if (this.props.match.params.id !== prevProps.match.params.id) {
       this.getShipmentDetails()
     }
   }
 
-  render () {
+  render() {
     const {
       shipperRatingScore,
       commodity,
@@ -54,24 +54,24 @@ export default class ShipmentSingle extends Component {
       weight,
       equipmentType,
       equipmentSize,
-      map
+      map,
     } = this.state.shipmentDetails
     return (
-      <div className='shipment-single'>
+      <div className="shipment-single">
         <div
           // onClick={props.shipmentDetail(id)}
-          className='shipment-single-container'
+          className="shipment-single-container"
         >
           {!this.state.isLoading ? (
             <>
-              <div className='shipment-single-section shipment-single-cities'>
+              <div className="shipment-single-section shipment-single-cities">
                 <p>
                   {stops[0].city}, {stops[0].state}
                   <span>></span>
                   {stops[1].city}, {stops[1].state}
                 </p>
               </div>
-              <div className='shipment-single-section shipment-single-routes'>
+              <div className="shipment-single-section shipment-single-routes">
                 <ShipmentFromTo
                   number={'1'}
                   type={'Pick-Up'}
@@ -90,21 +90,21 @@ export default class ShipmentSingle extends Component {
                   icon1Name={stops[1].accessorials[0]}
                   icon2Name={stops[1].accessorials[1]}
                 />
-                <div className='shipment-single-section shipment-single-map'>
+                <div className="shipment-single-section shipment-single-map">
                   <img
-                    className='shipment-single-map-image'
-                    alt='map'
+                    className="shipment-single-map-image"
+                    alt="map"
                     src={map}
                   />
                 </div>
               </div>
-              <div className='shipment-single-section shipment-single-specs'>
+              <div className="shipment-single-section shipment-single-specs">
                 <div>
                   <p>
                     <img
-                      className='shipment-single-icon'
+                      className="shipment-single-icon"
                       src={dryVan}
-                      alt='Dry Van'
+                      alt="Dry Van"
                     />
                     {equipmentType === 'DRV' ? 'Dry Van' : equipmentType}{' '}
                     {equipmentSize}"
