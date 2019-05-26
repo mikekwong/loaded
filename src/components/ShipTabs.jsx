@@ -21,13 +21,13 @@ export default class ShipTabs extends Component {
     return (
       <>
         {/* <div className="shipments-all"> */}
-        {children.map(child => {
+        {children.map((child, idx) => {
           const { label } = child.props
 
           return (
             <ShipTab
               activeTab={activeTab}
-              key={label}
+              key={idx}
               label={label}
               onClick={onClickShipTab}
             />

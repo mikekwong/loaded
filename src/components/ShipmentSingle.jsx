@@ -56,12 +56,10 @@ export default class ShipmentSingle extends Component {
       equipmentSize,
       map,
     } = this.state.shipmentDetails
+
     return (
       <div className="shipment-single">
-        <div
-          // onClick={props.shipmentDetail(id)}
-          className="shipment-single-container"
-        >
+        <div className="shipment-single-container">
           {!this.state.isLoading ? (
             <>
               <div className="shipment-single-section shipment-single-cities">
@@ -72,24 +70,26 @@ export default class ShipmentSingle extends Component {
                 </p>
               </div>
               <div className="shipment-single-section shipment-single-routes">
-                <ShipmentFromTo
-                  number={'1'}
-                  type={'Pick-Up'}
-                  pickupDelivery={stops[0]}
-                  icon1={palletJack}
-                  icon2={airport}
-                  firstIconName={stops[0].accessorials[0]}
-                  secondIconName={stops[0].accessorials[1]}
-                />
-                <ShipmentFromTo
-                  number={'2'}
-                  type={'Delivery'}
-                  pickupDelivery={stops[1]}
-                  icon1={lumper}
-                  icon2={liftGate}
-                  firstIconName={stops[1].accessorials[0]}
-                  secondIconName={stops[1].accessorials[1]}
-                />
+                <div className="shipment-from-to">
+                  <ShipmentFromTo
+                    number={'1'}
+                    type={'Pick-Up'}
+                    pickupDelivery={stops[0]}
+                    icon1={palletJack}
+                    icon2={airport}
+                    firstIconName={stops[0].accessorials[0]}
+                    secondIconName={stops[0].accessorials[1]}
+                  />
+                  <ShipmentFromTo
+                    number={'2'}
+                    type={'Delivery'}
+                    pickupDelivery={stops[1]}
+                    icon1={lumper}
+                    icon2={liftGate}
+                    firstIconName={stops[1].accessorials[0]}
+                    secondIconName={stops[1].accessorials[1]}
+                  />
+                </div>
                 <div className="shipment-single-section shipment-single-map">
                   <img
                     className="shipment-single-map-image"

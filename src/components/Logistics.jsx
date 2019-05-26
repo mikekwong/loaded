@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar'
 import Shipments from './Shipments'
-import ShipmentSingle from './ShipmentSingle'
 import ShipTabs from './ShipTabs'
 
 import loadSmart from '../api/loadSmart'

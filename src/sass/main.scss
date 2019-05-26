@@ -223,8 +223,24 @@ body {
         margin: 0 10px 0 10px;
       }
 
-      .shipment-single-routes:nth-child(2) {
-        border-bottom: $border-stroke;
+      .shipment-single-routes {
+        width: 100%;
+
+        &:nth-child(2) {
+          border-bottom: $border-stroke;
+        }
+
+        .shipment-from-to {
+          width: 50%;
+        }
+
+        .shipment-single-map {
+          width: 40%;
+          .shipment-single-map-image {
+            width: 100%;
+            // margin-left: 20px;
+          }
+        }
       }
     }
 
@@ -233,8 +249,8 @@ body {
 
       .shipment-single-wrapper {
         display: flex;
-        flex-direction: row;
-        margin-bottom: 10px;
+        margin: 0 0 10px 0;
+        width: 100%;
 
         .shipment-single-number {
           width: 10px;
@@ -262,13 +278,6 @@ body {
         .shipment-single-pickup-delivery1 {
           border-bottom: $border-stroke;
         }
-      }
-    }
-
-    .shipment-single-map {
-      .shipment-single-map-image {
-        width: 40%;
-        // margin-left: 20px;
       }
     }
 
