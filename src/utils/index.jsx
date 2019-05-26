@@ -24,7 +24,7 @@ export const convertDate = dateInput => {
     'September',
     'October',
     'November',
-    'December',
+    'December'
   ]
 
   const days = [
@@ -34,14 +34,14 @@ export const convertDate = dateInput => {
     'Thursday',
     'Friday',
     'Saturday',
-    'Sunday',
+    'Sunday'
   ]
 
-  const converted = new Date(dateInput)
-  const day = days[converted.getDay()]
-  const date = converted.getDate()
-  const month = months[converted.getMonth()]
-  const year = converted.getFullYear()
+  let converted = new Date(dateInput)
+  let day = days[converted.getDay()]
+  let date = converted.getDate()
+  let month = months[converted.getMonth()]
+  let year = converted.getFullYear()
 
   return `${day}, ${date} ${month}, ${year}`
 }

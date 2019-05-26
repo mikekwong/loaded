@@ -50,24 +50,17 @@ body {
   flex-direction: row;
   justify-content: center; }
 
-.shipments-all {
+.shipments-tabs {
   width: 40%; }
 
 .shipments-list-container {
-  cursor: pointer;
   background-color: #fafafa;
   align-items: center;
-  padding: 10px 30px 15px 30px;
+  padding: 10px 30px;
+  border-right: 1px solid #c5c5c5;
   justify-content: space-between;
   font-size: 14px;
-  border-right: 1px solid #c5c5c5; }
-  .shipments-list-container:nth-child(n + 1):nth-child(-n + 2) {
-    border-bottom: 1px solid #c5c5c5; }
-  .shipments-list-container:nth-child(3) {
-    padding-bottom: 100vh; }
-  .shipments-list-container:nth-child(3) .shipments-list-transfer {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #c5c5c5; }
+  border-bottom: 1px solid #c5c5c5; }
   .shipments-list-container .shipments-list-deliver {
     align-items: flex-end; }
   .shipments-list-container .shipments-list-equipment {
@@ -156,13 +149,3 @@ body {
       list-style-type: none; }
     .shipment-single .shipment-single-container .shipment-single-icon {
       width: 20px; }
-
-.tab-list-item {
-  display: inline-block;
-  list-style: none;
-  margin-bottom: -1px;
-  padding: 0.5rem 0.75rem; }
-
-.tab-list-active {
-  background-color: white;
-  border-right: 1px solid #fff; }
