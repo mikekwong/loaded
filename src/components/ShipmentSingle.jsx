@@ -90,13 +90,7 @@ export default class ShipmentSingle extends Component {
                     secondIconName={stops[1].accessorials[1]}
                   />
                 </div>
-                <div className="shipment-single-section shipment-single-map">
-                  <img
-                    className="shipment-single-map-image"
-                    alt="map"
-                    src={map}
-                  />
-                </div>
+                <img className="shipment-single-map" alt="map" src={map} />
               </div>
               <div className="shipment-single-section shipment-single-specs">
                 <div>

@@ -31,11 +31,11 @@ const PickupDelivery = ({
               src={icon1}
               alt="Pallet Jack"
             />
-            {formatAccessorial(firstIconName)}
+            <p> {formatAccessorial(firstIconName)}</p>
           </li>
           <li>
             <img className="shipment-single-icon" src={icon2} alt="Airport" />
-            {/* {formatAccessorial(secondIconName)} */}
+            {/* <p> {formatAccessorial(secondIconName)}</p> */}
           </li>
         </ul>
       </div>
