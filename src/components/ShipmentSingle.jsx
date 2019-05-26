@@ -78,8 +78,8 @@ export default class ShipmentSingle extends Component {
                   pickupDelivery={stops[0]}
                   icon1={palletJack}
                   icon2={airport}
-                  icon1Name={stops[0].accessorials[0]}
-                  icon2Name={stops[0].accessorials[1]}
+                  firstIconName={stops[0].accessorials[0]}
+                  secondIconName={stops[0].accessorials[1]}
                 />
                 <ShipmentFromTo
                   number={'2'}
@@ -87,8 +87,8 @@ export default class ShipmentSingle extends Component {
                   pickupDelivery={stops[1]}
                   icon1={lumper}
                   icon2={liftGate}
-                  icon1Name={stops[1].accessorials[0]}
-                  icon2Name={stops[1].accessorials[1]}
+                  firstIconName={stops[1].accessorials[0]}
+                  secondIconName={stops[1].accessorials[1]}
                 />
                 <div className="shipment-single-section shipment-single-map">
                   <img

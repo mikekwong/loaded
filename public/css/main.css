@@ -67,23 +67,25 @@ body {
     .shipments-tabs .shipments-list .shipments-list-container:nth-child(3) .shipments-list-transfer {
       padding-bottom: 20px;
       border-bottom: 1px solid #c5c5c5; }
-    .shipments-tabs .shipments-list .shipments-list-container .shipments-list-deliver {
-      align-items: flex-end; }
-    .shipments-tabs .shipments-list .shipments-list-container .shipments-list-equipment {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 12px;
-      align-items: flex-end; }
-      .shipments-tabs .shipments-list .shipments-list-container .shipments-list-equipment :first-child {
-        color: gray;
-        font-size: 11px; }
-      .shipments-tabs .shipments-list .shipments-list-container .shipments-list-equipment .shipments-equipment-item {
+    .shipments-tabs .shipments-list .shipments-list-container a {
+      text-decoration: none; }
+      .shipments-tabs .shipments-list .shipments-list-container a .shipments-list-deliver {
         align-items: flex-end; }
-      .shipments-tabs .shipments-list .shipments-list-container .shipments-list-equipment .dryvan {
-        height: 25px;
-        width: 25px;
-        position: relative;
-        top: 7px; }
+      .shipments-tabs .shipments-list .shipments-list-container a .shipments-list-equipment {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        align-items: flex-end; }
+        .shipments-tabs .shipments-list .shipments-list-container a .shipments-list-equipment :first-child {
+          color: gray;
+          font-size: 11px; }
+        .shipments-tabs .shipments-list .shipments-list-container a .shipments-list-equipment .shipments-equipment-item {
+          align-items: flex-end; }
+        .shipments-tabs .shipments-list .shipments-list-container a .shipments-list-equipment .dryvan {
+          height: 25px;
+          width: 25px;
+          position: relative;
+          top: 7px; }
     .shipments-tabs .shipments-list .shipments-list-container .shipments-list-transfer {
       display: flex; }
     .shipments-tabs .shipments-list .shipments-list-container li {

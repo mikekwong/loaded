@@ -105,33 +105,37 @@ body {
         border-bottom: $border-stroke;
       }
 
-      .shipments-list-deliver {
-        align-items: flex-end;
-      }
+      a {
+        text-decoration: none;
 
-      .shipments-list-pickup {
-      }
-
-      .shipments-list-equipment {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 12px;
-        align-items: flex-end;
-
-        :first-child {
-          color: gray;
-          font-size: 11px;
-        }
-
-        .shipments-equipment-item {
+        .shipments-list-deliver {
           align-items: flex-end;
         }
-        // width: 100vw;
-        .dryvan {
-          height: 25px;
-          width: 25px;
-          position: relative;
-          top: 7px;
+
+        .shipments-list-pickup {
+        }
+
+        .shipments-list-equipment {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 12px;
+          align-items: flex-end;
+
+          :first-child {
+            color: gray;
+            font-size: 11px;
+          }
+
+          .shipments-equipment-item {
+            align-items: flex-end;
+          }
+          // width: 100vw;
+          .dryvan {
+            height: 25px;
+            width: 25px;
+            position: relative;
+            top: 7px;
+          }
         }
       }
 
