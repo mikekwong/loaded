@@ -1,0 +1,120 @@
+// Navigation color variables
+
+$gray-blue: #333e48;
+$loadsmart-green: #14d64d;
+$white: #fff;
+
+// Navigation styles
+
+.nav {
+  background-color: $gray-blue;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 55px;
+  z-index: 20;
+  font-size: 14px;
+
+  .nav-content {
+    max-width: 1280px;
+    padding: 0rem 3rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+#burger {
+  z-index: 15;
+  &:focus {
+    outline: none;
+  }
+}
+
+.nav-items-burger {
+  z-index: 10;
+  background: rgba($color: $gray-blue, $alpha: 1);
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  align-items: center;
+  // align-content: space-around;
+  top: 0;
+  left: 0;
+  text-align: center;
+  list-style-type: none;
+  transition: 0.5s all;
+  opacity: 0;
+
+  :first-child {
+    color: $loadsmart-green;
+
+    .phone-icon {
+      font-size: 15px;
+    }
+  }
+}
+
+.nav-item-burger {
+  color: $white;
+  margin: 5vh 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.flex-display {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-items {
+  display: none;
+
+  .nav-logo {
+    width: 120px;
+    cursor: pointer;
+  }
+}
+
+.phone-icon {
+  font-size: 10px;
+  transform: scale(-1, 1);
+}
+
+@media all and (min-width: 768px) {
+  #burger {
+    display: none;
+  }
+
+  .nav-items-burger {
+    display: none;
+  }
+
+  .nav {
+    .nav-content {
+      .nav-items {
+        display: inline;
+
+        .nav-item {
+          cursor: pointer;
+          text-transform: uppercase;
+          display: inline;
+          margin-left: 1.9rem;
+          color: $white;
+
+          &:first-child {
+            color: $loadsmart-green;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
