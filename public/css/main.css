@@ -218,9 +218,10 @@ body {
             font-size: 13px; }
         .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery ul {
           display: flex;
-          width: 30%; }
+          width: 35%; }
           .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery ul li {
-            margin-top: 10px; }
+            margin-top: 10px;
+            margin-right: 10px; }
             .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery ul li img {
               display: block;
               margin: 0 auto; }
