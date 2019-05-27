@@ -16,7 +16,7 @@ const Shipments = ({
     <>
       <ul className="shipments-list-equipment">
         <li className="shipments-list-equipment-item">
-          <img className="dryvan" alt="Dry Van" src={dryVan} />{' '}
+          <img className="dryvan" alt={equipmentType} src={dryVan} />{' '}
           {equipmentType === 'DRV' ? 'Dry Van' : equipmentType} {equipmentSize}"
         </li>
         <li className="shipments-list-equipment-item shipments-list-cost">

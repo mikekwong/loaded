@@ -17,6 +17,7 @@ export default class ShipmentSingle extends Component {
       isLoading: true,
       error: null,
       shipmentDetails: [],
+      stops: [],
     }
   }
 
@@ -26,6 +27,7 @@ export default class ShipmentSingle extends Component {
       const { data } = await loadSmart.get(`shipment-${id}.json`)
       this.setState({
         shipmentDetails: data,
+        stops: data.stops,
         isLoading: false,
       })
     } catch (error) {
@@ -57,10 +59,12 @@ export default class ShipmentSingle extends Component {
       map,
     } = this.state.shipmentDetails
 
+    console.log(this.state.stops[1])
+
     return (
       <div className="shipment-single">
         <div className="shipment-single-container">
-          {!this.state.isLoading ? (
+          {!this.state.isLoading && this.state.stops ? (
             <>
               <div className="shipment-single-section shipment-single-cities">
                 <p>
@@ -78,7 +82,7 @@ export default class ShipmentSingle extends Component {
                     icon1={palletJack}
                     icon2={airport}
                     firstIconName={stops[0].accessorials[0]}
-                    secondIconName={stops[0].accessorials[1]}
+                    secondIconName={this.state.stops[0].accessorials[1]}
                   />
                   <ShipmentFromTo
                     number={'2'}
@@ -87,7 +91,7 @@ export default class ShipmentSingle extends Component {
                     icon1={lumper}
                     icon2={liftGate}
                     firstIconName={stops[1].accessorials[0]}
-                    secondIconName={stops[1].accessorials[1]}
+                    secondIconName={this.state.stops[1].accessorials[1]}
                   />
                 </div>
                 <img className="shipment-single-map" alt="map" src={map} />
@@ -98,7 +102,7 @@ export default class ShipmentSingle extends Component {
                     <img
                       className="shipment-single-icon"
                       src={dryVan}
-                      alt="Dry Van"
+                      alt={equipmentType}
                     />
                     {equipmentType === 'DRV' ? ' Dry Van' : equipmentType}{' '}
                     {equipmentSize}"
