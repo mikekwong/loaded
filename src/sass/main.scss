@@ -18,10 +18,15 @@ $white: #fff;
   box-sizing: inherit;
   text-rendering: optimizeLegibility;
 }
+html {
+  height: 100%;
+}
 
 // Styles
 body {
   font-family: $roboto;
+  height: 100%;
+  overflow: hidden;
 }
 
 .nav {
@@ -75,9 +80,11 @@ body {
 
 .shipments-tabs {
   width: 40%;
-  // margin: 0 auto;
 
   .shipments-list {
+    overflow-y: auto; /*adds scroll to this container*/
+    height: 100vh;
+
     .shipments-list-container {
       // align-items: flex-end;
       // margin-left: 5vw;
@@ -96,11 +103,12 @@ body {
         border-bottom: $border-stroke;
       }
 
-      &:nth-child(3) {
-        padding-bottom: 100vh;
+      &:last-child {
+        // overflow-y: hidden;
+        height: 400px;
       }
 
-      &:nth-child(3) .shipments-list-transfer {
+      &:last-child .shipments-list-transfer {
         padding-bottom: 20px;
         border-bottom: $border-stroke;
       }
@@ -220,8 +228,7 @@ body {
 }
 
 .shipment-single {
-  // position: relative;
-  // left: 100px;
+  height: 100%; /*allows both columns to span the full height of the browser window*/
   width: 60%;
 
   // background-color: blue;
