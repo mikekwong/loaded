@@ -142,7 +142,7 @@ body {
     display: flex;
     flex-direction: row; }
   .shipment-single-specs .values {
-    color: #414141;
+    color: rgba(65, 65, 65, 0.9);
     font-weight: 500;
     font-size: 13px; }
   .shipment-single-specs .stars {
@@ -181,7 +181,7 @@ body {
     .shipment-single .shipment-single-container .shipment-single-cities {
       font-size: 17px;
       font-weight: 500;
-      color: #313131;
+      color: #414141;
       padding-bottom: 20px; }
       .shipment-single .shipment-single-container .shipment-single-cities span {
         color: #8d8d8d;
