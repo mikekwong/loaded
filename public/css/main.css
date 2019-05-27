@@ -112,6 +112,12 @@ body {
     border-left: 1px solid #c5c5c5;
     border-right: 1px solid #fff; }
 
+.shipment-single-specs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0; }
+
 .tab-list-item {
   display: inline-block;
   list-style: none;
@@ -172,6 +178,7 @@ body {
             color: #8d8d8d;
             font-size: 13px; }
           .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery p:nth-child(2) {
+            color: #414141;
             font-size: 15px;
             font-weight: 500; }
           .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery p:nth-child(3) {
@@ -179,7 +186,15 @@ body {
             font-size: 13px; }
         .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery ul {
           display: flex;
-          flex-direction: row; }
+          width: 30%; }
+          .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery ul li {
+            margin-top: 10px; }
+            .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery ul li img {
+              display: block;
+              margin: 0 auto; }
+            .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery ul li .accessorial {
+              color: #414141;
+              font-size: 12px; }
       .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery1 {
         border-bottom: 1px solid #c5c5c5; }
     .shipment-single .shipment-single-container .shipment-single-routes {

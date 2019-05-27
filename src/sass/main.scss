@@ -187,6 +187,13 @@ body {
   }
 }
 
+.shipment-single-specs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
 .tab-list-item {
   display: inline-block;
   list-style: none;
@@ -270,6 +277,7 @@ body {
               font-size: 13px;
             }
             &:nth-child(2) {
+              color: $dark-gray;
               font-size: 15px;
               font-weight: 500;
             }
@@ -281,7 +289,20 @@ body {
 
           ul {
             display: flex;
-            flex-direction: row;
+            width: 30%;
+
+            li {
+              margin-top: 10px;
+              img {
+                display: block;
+                margin: 0 auto;
+              }
+
+              .accessorial {
+                color: $dark-gray;
+                font-size: 12px;
+              }
+            }
           }
         }
 

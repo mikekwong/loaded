@@ -10,7 +10,7 @@ const PickupDelivery = ({
   firstIconName,
   secondIconName,
 }) => {
-  console.log(secondIconName)
+  // console.log(secondIconName)
   return (
     <div className="shipment-single-content shipment-single-wrapper">
       <div className="shipment-single-content shipment-single-number">
@@ -31,11 +31,11 @@ const PickupDelivery = ({
               src={icon1}
               alt="Pallet Jack"
             />
-            <p> {formatAccessorial(firstIconName)}</p>
+            <p className="accessorial">{formatAccessorial(firstIconName)}</p>
           </li>
           <li>
             <img className="shipment-single-icon" src={icon2} alt="Airport" />
-            {/* <p> {formatAccessorial(secondIconName)}</p> */}
+            <p className="accessorial">Airport</p>
           </li>
         </ul>
       </div>
