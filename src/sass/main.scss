@@ -82,16 +82,11 @@ body {
   width: 40%;
 
   .shipments-list {
-    overflow-y: auto; /*adds scroll to this container*/
+    overflow-y: auto;
     height: 100vh;
 
     .shipments-list-container {
-      // align-items: flex-end;
-      // margin-left: 5vw;
-      // max-width: 1280px;
-      // width: 40vw;
       background-color: $off-white;
-      // width: 40vw;
       align-items: center;
       padding: 10px 30px;
       border-right: $border-stroke;
@@ -104,7 +99,6 @@ body {
       }
 
       &:last-child {
-        // overflow-y: hidden;
         height: 400px;
       }
 
@@ -137,7 +131,6 @@ body {
           .shipments-equipment-item {
             align-items: flex-end;
           }
-          // width: 100vw;
           .dryvan {
             height: 25px;
             width: 25px;
@@ -149,7 +142,6 @@ body {
 
       .shipments-list-transfer {
         display: flex;
-        // justify-content: space-evenly;
       }
 
       li {
@@ -157,7 +149,6 @@ body {
       }
       .shipments-list-route {
         &:not(:nth-child(2)) {
-          // margin-right: 20px;
           width: 150px;
         }
       }
@@ -169,7 +160,6 @@ body {
 
       .shipments-list-arrow {
         width: 20px;
-        // text-align: center;
         color: $light-gray;
       }
 
@@ -220,12 +210,20 @@ body {
     color: $light-gray;
   }
 
+  .ratings {
+    display: flex;
+    flex-direction: row;
+  }
+
   .values {
     color: $dark-gray;
     font-weight: 500;
     font-size: 13px;
   }
   .stars {
+    margin-right: 4px;
+    position: relative;
+    top: 3px;
     color: rgb(255, 196, 0);
   }
 }
@@ -256,10 +254,7 @@ body {
 }
 
 .shipment-single {
-  height: 100%; /*allows both columns to span the full height of the browser window*/
   width: 60%;
-
-  // background-color: blue;
 
   .shipment-single-container {
     margin: 60px 0 0 60px;
@@ -285,19 +280,17 @@ body {
 
       .shipment-single-wrapper {
         display: flex;
-        // margin: 0 0 10px 0;
         width: 100%;
 
         .shipment-single-number {
-          width: 10px;
           margin: 39px 10px 0 0;
           color: $white;
-          border-radius: 50px;
+          border-radius: 50%;
           height: 15px;
-          width: 15px;
+          width: 17px;
           font-size: 13px;
           text-align: center;
-          padding: 2.5px;
+          padding: 2px;
           background-color: $dark-gray;
         }
 

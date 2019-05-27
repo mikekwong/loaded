@@ -59,7 +59,6 @@ body {
   width: 40%; }
   .shipments-tabs .shipments-list {
     overflow-y: auto;
-    /*adds scroll to this container*/
     height: 100vh; }
     .shipments-tabs .shipments-list .shipments-list-container {
       background-color: #fafafa;
@@ -139,11 +138,17 @@ body {
     font-size: 12px;
     text-transform: uppercase;
     color: #8d8d8d; }
+  .shipment-single-specs .ratings {
+    display: flex;
+    flex-direction: row; }
   .shipment-single-specs .values {
     color: #414141;
     font-weight: 500;
     font-size: 13px; }
   .shipment-single-specs .stars {
+    margin-right: 4px;
+    position: relative;
+    top: 3px;
     color: #ffc400; }
 
 .tab-list-item {
@@ -168,8 +173,6 @@ body {
   height: 280px; }
 
 .shipment-single {
-  height: 100%;
-  /*allows both columns to span the full height of the browser window*/
   width: 60%; }
   .shipment-single .shipment-single-container {
     margin: 60px 0 0 60px;
@@ -189,15 +192,14 @@ body {
       display: flex;
       width: 100%; }
       .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-number {
-        width: 10px;
         margin: 39px 10px 0 0;
         color: #fff;
-        border-radius: 50px;
+        border-radius: 50%;
         height: 15px;
-        width: 15px;
+        width: 17px;
         font-size: 13px;
         text-align: center;
-        padding: 2.5px;
+        padding: 2px;
         background-color: #414141; }
       .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery {
         padding: 20px 0; }

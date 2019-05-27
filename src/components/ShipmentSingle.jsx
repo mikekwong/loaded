@@ -114,17 +114,18 @@ export default class ShipmentSingle extends Component {
                 </div>
                 <div>
                   <p className="description">Shipper Rating</p>
-                  <p className="values stars">
-                    {shipperRatingScore}{' '}
+                  <div className="ratings">
+                    <p className="values stars">{shipperRatingScore} </p>
                     <StarRatings
                       rating={shipperRatingScore}
+                      className="stars-count"
                       starDimension="13px"
                       starSpacing=".8px"
                       starRatedColor="rgb(255, 196, 0)"
                       NumberOfStar={5}
                       name="rating"
                     />
-                  </p>
+                  </div>
                 </div>
               </div>
             </>
