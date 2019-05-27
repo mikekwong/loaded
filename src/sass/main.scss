@@ -200,6 +200,34 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 20px 0;
+
+  .equipment {
+    font-size: 14px;
+    position: relative;
+    top: -8px;
+    color: rgba($color: $dark-gray, $alpha: 0.9);
+
+    img {
+      position: relative;
+      top: 8px;
+      width: 28px;
+    }
+  }
+
+  .description {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $light-gray;
+  }
+
+  .values {
+    color: $dark-gray;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .stars {
+    color: rgb(255, 196, 0);
+  }
 }
 
 .tab-list-item {
@@ -334,7 +362,7 @@ body {
       list-style-type: none;
     }
 
-    .shipment-single-icon {
+    .shipment-single-icon:not(:last-child) {
       width: 20px;
     }
   }

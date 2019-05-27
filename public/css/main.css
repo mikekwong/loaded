@@ -126,6 +126,25 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 20px 0; }
+  .shipment-single-specs .equipment {
+    font-size: 14px;
+    position: relative;
+    top: -8px;
+    color: rgba(65, 65, 65, 0.9); }
+    .shipment-single-specs .equipment img {
+      position: relative;
+      top: 8px;
+      width: 28px; }
+  .shipment-single-specs .description {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #8d8d8d; }
+  .shipment-single-specs .values {
+    color: #414141;
+    font-weight: 500;
+    font-size: 13px; }
+  .shipment-single-specs .stars {
+    color: #ffc400; }
 
 .tab-list-item {
   display: inline-block;
@@ -217,5 +236,5 @@ body {
       width: 100%; }
     .shipment-single .shipment-single-container li {
       list-style-type: none; }
-    .shipment-single .shipment-single-container .shipment-single-icon {
+    .shipment-single .shipment-single-container .shipment-single-icon:not(:last-child) {
       width: 20px; }
