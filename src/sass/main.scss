@@ -1,13 +1,20 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
 
+// Burger icon animation library
+@import 'base/hamburgers-settings';
+
+@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
 // Font variables
 $roboto: 'Roboto', serif;
 $border-stroke: 1px solid rgb(197, 197, 197);
+$gray-blue: #333e48;
 $dark-gray: rgb(65, 65, 65);
 $light-gray: rgb(141, 141, 141);
 $off-white: rgb(250, 250, 250);
 $white: #fff;
+$loadsmart-green: #14d64d;
 
 // CSS Reset
 *,
@@ -30,7 +37,7 @@ body {
 }
 
 .nav {
-  background-color: #333e48;
+  background-color: $gray-blue;
   position: sticky;
   top: 0;
   width: 100%;
@@ -49,19 +56,60 @@ body {
   }
 }
 
-.nav-logo {
-  width: 120px;
+#burger {
+  z-index: 15;
+  &:focus {
+    outline: none;
+  }
 }
 
-.nav-item {
-  text-transform: uppercase;
-  display: inline;
-  margin-left: 2rem;
-  color: $white;
+.nav-items-burger {
+  z-index: 10;
+  background: rgba($color: $gray-blue, $alpha: 1);
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  align-items: center;
+  // align-content: space-around;
+  top: 0;
+  left: 0;
+  text-align: center;
+  list-style-type: none;
+  transition: 0.5s all;
+  opacity: 0;
 
-  &:first-child {
-    color: #14d64d;
-    font-weight: 700;
+  :first-child {
+    color: $loadsmart-green;
+
+    .phone-icon {
+      font-size: 15px;
+    }
+  }
+}
+
+.nav-item-burger {
+  color: $white;
+  margin: 5vh 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.flex-display {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-items {
+  display: none;
+
+  .nav-logo {
+    width: 120px;
+    cursor: pointer;
   }
 }
 
@@ -366,6 +414,34 @@ body {
 }
 
 @media all and (min-width: 768px) {
+  #burger {
+    display: none;
+  }
+
+  .nav-items-burger {
+    display: none;
+  }
+
+  .nav {
+    .nav-content {
+      .nav-items {
+        display: inline;
+
+        .nav-item {
+          cursor: pointer;
+          text-transform: uppercase;
+          display: inline;
+          margin-left: 1.9rem;
+          color: $white;
+
+          &:first-child {
+            color: $loadsmart-green;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media all and (min-width: 1024px) {

@@ -8,12 +8,11 @@ const PickupDelivery = ({
   icon1,
   icon2,
   firstIconName,
-  secondIconName,
+  secondIconName
 }) => {
-  console.log(secondIconName)
   return (
-    <div className="shipment-single-content shipment-single-wrapper">
-      <div className="shipment-single-content shipment-single-number">
+    <div className='shipment-single-content shipment-single-wrapper'>
+      <div className='shipment-single-content shipment-single-number'>
         {number}
       </div>
       <div
@@ -27,20 +26,20 @@ const PickupDelivery = ({
         <ul>
           <li>
             <img
-              className="shipment-single-icon"
+              className='shipment-single-icon'
               src={icon1}
               alt={firstIconName}
             />
-            <p className="accessorial">{formatAccessorial(firstIconName)}</p>
+            <p className='accessorial'>{formatAccessorial(firstIconName)}</p>
           </li>
           <li>
             <img
-              className="shipment-single-icon"
+              className='shipment-single-icon'
               src={icon2}
               alt={secondIconName}
             />
             {secondIconName ? (
-              <p className="accessorial">{formatAccessorial(secondIconName)}</p>
+              <p className='accessorial'>{formatAccessorial(secondIconName)}</p>
             ) : null}
           </li>
         </ul>

@@ -11,44 +11,44 @@ import liftGate from '../icons/icon_accessorial_lift_gate.svg'
 import dryVan from '../icons/icon_truck_dryvan.svg'
 
 export default class ShipmentSingle extends Component {
-  constructor() {
+  constructor () {
     super()
     this.state = {
       isLoading: true,
       error: null,
       shipmentDetails: [],
-      stops: [],
+      stops: []
     }
   }
 
-  async getShipmentDetails() {
+  async getShipmentDetails () {
     const { id } = this.props.match.params
     try {
       const { data } = await loadSmart.get(`shipment-${id}.json`)
       this.setState({
         shipmentDetails: data,
         stops: data.stops,
-        isLoading: false,
+        isLoading: false
       })
     } catch (error) {
       this.setState({
         error,
-        isLoading: false,
+        isLoading: false
       })
     }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.getShipmentDetails()
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate (prevProps) {
     if (this.props.match.params.id !== prevProps.match.params.id) {
       this.getShipmentDetails()
     }
   }
 
-  render() {
+  render () {
     const {
       shipperRatingScore,
       commodity,
@@ -56,25 +56,23 @@ export default class ShipmentSingle extends Component {
       weight,
       equipmentType,
       equipmentSize,
-      map,
+      map
     } = this.state.shipmentDetails
 
-    console.log(this.state.stops[1])
-
     return (
-      <div className="shipment-single">
-        <div className="shipment-single-container">
+      <div className='shipment-single'>
+        <div className='shipment-single-container'>
           {!this.state.isLoading && this.state.stops ? (
             <>
-              <div className="shipment-single-section shipment-single-cities">
+              <div className='shipment-single-section shipment-single-cities'>
                 <p>
                   {stops[0].city}, {stops[0].state}
                   <span>></span>
                   {stops[1].city}, {stops[1].state}
                 </p>
               </div>
-              <div className="shipment-single-section shipment-single-routes">
-                <div className="shipment-from-to">
+              <div className='shipment-single-section shipment-single-routes'>
+                <div className='shipment-from-to'>
                   <ShipmentFromTo
                     number={'1'}
                     type={'Pick-Up'}
@@ -94,13 +92,13 @@ export default class ShipmentSingle extends Component {
                     secondIconName={this.state.stops[1].accessorials[1]}
                   />
                 </div>
-                <img className="shipment-single-map" alt="map" src={map} />
+                <img className='shipment-single-map' alt='map' src={map} />
               </div>
-              <div className="shipment-single-section shipment-single-specs">
+              <div className='shipment-single-section shipment-single-specs'>
                 <div>
-                  <p className="equipment">
+                  <p className='equipment'>
                     <img
-                      className="shipment-single-icon"
+                      className='shipment-single-icon'
                       src={dryVan}
                       alt={equipmentType}
                     />
@@ -109,25 +107,25 @@ export default class ShipmentSingle extends Component {
                   </p>
                 </div>
                 <div>
-                  <p className="description">Commodity</p>
-                  <p className="values">{commodity}</p>
+                  <p className='description'>Commodity</p>
+                  <p className='values'>{commodity}</p>
                 </div>
                 <div>
-                  <p className="description">Weight</p>
-                  <p className="values">{addCommas(weight)} lb</p>
+                  <p className='description'>Weight</p>
+                  <p className='values'>{addCommas(weight)} lb</p>
                 </div>
                 <div>
-                  <p className="description">Shipper Rating</p>
-                  <div className="ratings">
-                    <p className="values stars">{shipperRatingScore} </p>
+                  <p className='description'>Shipper Rating</p>
+                  <div className='ratings'>
+                    <p className='values stars'>{shipperRatingScore} </p>
                     <StarRatings
                       rating={shipperRatingScore}
-                      className="stars-count"
-                      starDimension="13px"
-                      starSpacing=".8px"
-                      starRatedColor="rgb(255, 196, 0)"
+                      className='stars-count'
+                      starDimension='13px'
+                      starSpacing='.8px'
+                      starRatedColor='rgb(255, 196, 0)'
                       NumberOfStar={5}
-                      name="rating"
+                      name='rating'
                     />
                   </div>
                 </div>

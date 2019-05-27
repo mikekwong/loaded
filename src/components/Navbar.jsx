@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../icons/logo.svg'
+import MobileNav from './MobileNav'
 
 const Navbar = () => {
   return (
@@ -15,6 +16,9 @@ const Navbar = () => {
         <li className='nav-item'>Login</li>
         <li className='nav-item'>Sign Up</li>
       </ul>
+      {/* Beginning of mobile navigation */}
+      <MobileNav />
+      {/* end of mobile navigation */}
     </div>
   )
 }
