@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import logo from '../icons/logo.svg'
 
 export default class MobileNav extends Component {
   constructor () {
@@ -28,6 +29,9 @@ export default class MobileNav extends Component {
             <span className='hamburger-inner' />
           </span>
         </button>
+        <a className='nav-item-burger-logo' href='/'>
+          <img alt='Logo' src={logo} />
+        </a>
         <ul
           className={
             this.state.active

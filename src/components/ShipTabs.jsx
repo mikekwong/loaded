@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ShipTab from './ShipTab'
 
 export default class ShipTabs extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = { activeTab: this.props.children[0].props.label }
   }
@@ -11,16 +11,15 @@ export default class ShipTabs extends Component {
     this.setState({ activeTab: tab })
   }
 
-  render() {
+  render () {
     const {
       onClickShipTab,
       props: { children },
-      state: { activeTab },
+      state: { activeTab }
     } = this
 
     return (
       <>
-        {/* <div className="shipments-all"> */}
         {children.map((child, idx) => {
           const { label } = child.props
 
@@ -33,13 +32,10 @@ export default class ShipTabs extends Component {
             />
           )
         })}
-        {/* </div> */}
-        {/* <div className="tab-content"> */}
         {children.map(child => {
           if (child.props.label !== activeTab) return undefined
           return child.props.children
         })}
-        {/* </div> */}
       </>
     )
   }

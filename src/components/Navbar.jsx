@@ -5,7 +5,9 @@ import MobileNav from './MobileNav'
 const Navbar = () => {
   return (
     <div className='nav-content'>
-      <img className='nav-logo' alt='Logo' src={logo} />
+      <a href='/' className='nav-logo'>
+        <img alt='Logo' src={logo} />
+      </a>
       <ul className='nav-items'>
         <li className='nav-item'>
           <i className='fas fa-phone phone-icon' />
