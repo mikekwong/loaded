@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Shipments from './Shipments'
 import ShipTabs from './ShipTabs'
 import loadSmart from '../../api/loadSmart'
-
 export default class App extends Component {
   constructor () {
     super()

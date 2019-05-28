@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import ShipmentSingle from '../shipments/ShipmentSingle'
-import ShipmentFromTo from '../shipments/ShipmentFromTo'
 
 let wrapper
 
