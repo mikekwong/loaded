@@ -13,6 +13,7 @@ export default class MobileNav extends Component {
     const currentState = this.state.active
     this.setState({ active: !currentState })
   }
+
   render () {
     return (
       <>

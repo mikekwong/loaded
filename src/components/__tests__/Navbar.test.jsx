@@ -21,8 +21,16 @@ import MobileNav from '../navigation/MobileNav'
 //   ReactDOM.unmountComponentAtNode(div)
 // })
 
-it('shows the nav bar', () => {
-  let wrapped = shallow(<Navbar />)
+let wrapper
 
-  expect(wrapped.find(MobileNav).length).toEqual(1)
+beforeEach(() => {
+  wrapper = shallow(<Navbar />)
+})
+
+it('should show the mobile nav bar if necessary', () => {
+  expect(wrapper.find('div').length).toEqual(1)
+})
+
+it('should render the Calculator Component', () => {
+  expect(wrapper.containsMatchingElement(<MobileNav />)).toEqual(true)
 })

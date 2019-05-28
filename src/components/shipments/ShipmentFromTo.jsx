@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { convertDate, formatAccessorial } from '../../utils'
 
-const PickupDelivery = ({
+const ShipmentFromTo = ({
   number,
   pickupDelivery,
   type,
@@ -48,4 +49,12 @@ const PickupDelivery = ({
   )
 }
 
-export default PickupDelivery
+ShipmentFromTo.propTypes = {
+  number: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired,
+  pickUpDelivery: PropTypes.object,
+  firstIconName: PropTypes.string.isRequired,
+  secondIconName: PropTypes.string
+}
+
+export default ShipmentFromTo

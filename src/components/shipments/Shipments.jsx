@@ -1,17 +1,10 @@
 import React from 'react'
-import dryVan from '../../icons/icon_truck_dryvan.svg'
+import PropTypes from 'prop-types'
 import { addCommas } from '../../utils'
 import ShipmentsFromTo from './ShipmentsFromTo'
+import dryVan from '../../icons/icon_truck_dryvan.svg'
 
-const Shipments = ({
-  onClick,
-  active,
-  toggleShipment,
-  fare,
-  equipmentType,
-  equipmentSize,
-  stops
-}) => {
+const Shipments = ({ active, fare, equipmentType, equipmentSize, stops }) => {
   return (
     <>
       <ul className='shipments-list-equipment'>
@@ -24,18 +17,19 @@ const Shipments = ({
         </li>
       </ul>
       <div className='shipments-list-transfer'>
-        <ShipmentsFromTo
-          stops={stops[0]}
-          classLabel={'shipments-list-pickup'}
-        />
+        <ShipmentsFromTo stops={stops[0]} />
         <div className='shipments-list-route shipments-list-arrow'>></div>
-        <ShipmentsFromTo
-          stops={stops[1]}
-          classLabel={'shipments-list-pickup'}
-        />
+        <ShipmentsFromTo stops={stops[1]} />
       </div>
     </>
   )
+}
+
+Shipments.propTypes = {
+  fare: PropTypes.number.isRequired,
+  equipmentType: PropTypes.string.isRequired,
+  equipmentSize: PropTypes.string.isRequired,
+  stops: PropTypes.array.isRequired
 }
 
 export default Shipments

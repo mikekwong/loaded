@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types'
 export default class shipTab extends Component {
+  static propTypes = {
+    activeTab: PropTypes.object.isRequired,
+    label: PropTypes.object.isRequired,
+    onClick: PropTypes.func.isRequired
+  }
+
   onClick = () => {
     const { label, onClick } = this.props
     onClick(label)

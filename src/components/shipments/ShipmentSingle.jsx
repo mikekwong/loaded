@@ -72,7 +72,7 @@ export default class ShipmentSingle extends Component {
               <div className='shipment-single-section shipment-single-routes'>
                 <div className='shipment-from-to'>
                   <ShipmentFromTo
-                    number={'1'}
+                    number={1}
                     type={'Pick-Up'}
                     pickupDelivery={stops[0]}
                     icon1={palletJack}
@@ -81,7 +81,7 @@ export default class ShipmentSingle extends Component {
                     secondIconName={stops[0].accessorials[1]}
                   />
                   <ShipmentFromTo
-                    number={'2'}
+                    number={2}
                     type={'Delivery'}
                     pickupDelivery={stops[1]}
                     icon1={lumper}

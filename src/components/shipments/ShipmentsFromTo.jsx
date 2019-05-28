@@ -1,15 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { convertDate } from '../../utils'
 
-const ShipmentsFromTo = ({ stops, from }) => {
+const ShipmentsFromTo = ({ stops }) => {
   return (
     <>
-      <ul
-        className={
-          'shipments-list-route ' +
-          (from ? ' shipments-list-pickup' : 'shipments-list-deliver')
-        }
-      >
+      <ul className='shipments-list-route'>
         <li>
           {stops.city}, {stops.state} {stops.zipcode}
         </li>
@@ -17,6 +13,10 @@ const ShipmentsFromTo = ({ stops, from }) => {
       </ul>
     </>
   )
+}
+
+ShipmentsFromTo.propTypes = {
+  stops: PropTypes.object.isRequired
 }
 
 export default ShipmentsFromTo

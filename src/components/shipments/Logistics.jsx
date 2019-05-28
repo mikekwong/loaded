@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Shipments from './Shipments'
 import ShipTabs from './ShipTabs'
-
 import loadSmart from '../../api/loadSmart'
-import { Link } from 'react-router-dom'
-
-// import shipments from '../json/shipments'
 
 export default class App extends Component {
   constructor () {
@@ -46,11 +43,7 @@ export default class App extends Component {
                     key={shipment.id}
                     label={
                       <Link to={`/shipment/${shipment.id}`}>
-                        <Shipments
-                          active={this.state.active}
-                          key={shipment.id}
-                          {...shipment}
-                        />
+                        <Shipments key={shipment.id} {...shipment} />
                       </Link>
                     }
                   />

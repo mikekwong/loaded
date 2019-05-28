@@ -219,6 +219,13 @@
         display: flex; }
       .shipments-tabs .shipments-list .shipments-list-container li {
         list-style-type: none; }
+      .shipments-tabs .shipments-list .shipments-list-container .shipments-list-route li:first-child {
+        font-weight: 500;
+        color: #414141;
+        margin-bottom: 5px; }
+      .shipments-tabs .shipments-list .shipments-list-container .shipments-list-route li:nth-child(2) {
+        font-size: 12px;
+        color: #8d8d8d; }
       .shipments-tabs .shipments-list .shipments-list-container .shipments-list-route:not(:nth-child(2)) {
         width: 150px; }
       .shipments-tabs .shipments-list .shipments-list-container .shipments-list-cost {
@@ -226,15 +233,6 @@
         font-weight: 500; }
       .shipments-tabs .shipments-list .shipments-list-container .shipments-list-arrow {
         width: 20px;
-        color: #8d8d8d; }
-      .shipments-tabs .shipments-list .shipments-list-container .shipments-list-deliver li:first-child,
-      .shipments-tabs .shipments-list .shipments-list-container .shipments-list-pickup li:first-child {
-        font-weight: 500;
-        color: #414141;
-        margin-bottom: 5px; }
-      .shipments-tabs .shipments-list .shipments-list-container .shipments-list-deliver li:nth-child(2),
-      .shipments-tabs .shipments-list .shipments-list-container .shipments-list-pickup li:nth-child(2) {
-        font-size: 12px;
         color: #8d8d8d; }
     .shipments-tabs .shipments-list .active {
       background-color: #fff;

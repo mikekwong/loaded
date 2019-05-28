@@ -48,6 +48,7 @@
           .shipments-equipment-item {
             align-items: flex-end;
           }
+
           .dryvan {
             height: 25px;
             width: 25px;
@@ -65,6 +66,17 @@
         list-style-type: none;
       }
       .shipments-list-route {
+        li:first-child {
+          font-weight: 500;
+          color: $dark-gray;
+          margin-bottom: 5px;
+        }
+
+        li:nth-child(2) {
+          font-size: 12px;
+          color: $light-gray;
+        }
+
         &:not(:nth-child(2)) {
           width: 150px;
         }
@@ -78,19 +90,6 @@
       .shipments-list-arrow {
         width: 20px;
         color: $light-gray;
-      }
-
-      .shipments-list-deliver,
-      .shipments-list-pickup {
-        li:first-child {
-          font-weight: 500;
-          color: $dark-gray;
-          margin-bottom: 5px;
-        }
-        li:nth-child(2) {
-          font-size: 12px;
-          color: $light-gray;
-        }
       }
     }
 
