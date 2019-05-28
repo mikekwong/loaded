@@ -1,14 +1,16 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
 
-// Burger icon animation library
-@import 'base/hamburgers-settings';
-
+// Burger library icon settings
+@import 'settings/hamburgers-settings';
+// Hamburger 3rd party library
 @import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
-
 // Navigation styles mobile & desktop
-
-@import 'base/navigation';
+@import 'layout/navigation';
+// Styles for all shipments panel
+@import 'layout/shipments';
+// Styles for single shipment panel
+@import 'layout/shipment';
 
 // Font variables
 $roboto: 'Roboto', serif;
@@ -29,10 +31,9 @@ $white: #fff;
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  text-rendering: optimizeLegibility;
 }
 
-// Styles
+// Parent div styles
 
 body {
   font-family: $roboto;
@@ -45,290 +46,6 @@ body {
   flex-direction: column;
   justify-content: center;
   max-width: 1280px;
-}
-
-.shipments-tabs {
-  width: 100%;
-
-  .shipments-list {
-    overflow-y: auto;
-    height: 100vh;
-
-    .shipments-list-container {
-      background-color: $off-white;
-      align-items: center;
-      padding: 10px 30px;
-      border-right: $border-stroke;
-      justify-content: space-between;
-      font-size: 14px;
-      border-left: 1px solid $off-white;
-
-      &:nth-child(n + 1):nth-child(-n + 2) {
-        border-bottom: $border-stroke;
-      }
-
-      &:last-child {
-        height: 400px;
-      }
-
-      &:last-child .shipments-list-transfer {
-        padding-bottom: 20px;
-        border-bottom: $border-stroke;
-      }
-
-      a {
-        text-decoration: none;
-
-        .shipments-list-deliver {
-          align-items: flex-end;
-        }
-
-        .shipments-list-equipment {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 12px;
-          align-items: flex-end;
-
-          :first-child {
-            color: gray;
-            font-size: 11px;
-          }
-
-          .shipments-equipment-item {
-            align-items: flex-end;
-          }
-          .dryvan {
-            height: 25px;
-            width: 25px;
-            position: relative;
-            top: 7px;
-          }
-        }
-      }
-
-      .shipments-list-transfer {
-        display: flex;
-      }
-
-      li {
-        list-style-type: none;
-      }
-      .shipments-list-route {
-        &:not(:nth-child(2)) {
-          width: 150px;
-        }
-      }
-
-      .shipments-list-cost {
-        color: $dark-gray;
-        font-weight: 500;
-      }
-
-      .shipments-list-arrow {
-        width: 20px;
-        color: $light-gray;
-      }
-
-      .shipments-list-deliver,
-      .shipments-list-pickup {
-        li:first-child {
-          font-weight: 500;
-          color: $dark-gray;
-          margin-bottom: 5px;
-        }
-        li:nth-child(2) {
-          font-size: 12px;
-          color: $light-gray;
-        }
-      }
-    }
-
-    .active {
-      background-color: #fff;
-      border-left: $border-stroke;
-      border-right: 1px solid #fff;
-    }
-  }
-}
-
-.shipment-single-specs {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px 0;
-
-  .equipment {
-    font-size: 14px;
-    position: relative;
-    top: -8px;
-    color: rgba($color: $dark-gray, $alpha: 0.9);
-
-    img {
-      position: relative;
-      top: 8px;
-      width: 28px;
-    }
-  }
-
-  .description {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: $light-gray;
-  }
-
-  .ratings {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .values {
-    color: rgba($dark-gray, 0.9);
-    font-weight: 500;
-    font-size: 13px;
-  }
-  .stars {
-    margin-right: 4px;
-    position: relative;
-    top: 3px;
-    color: rgb(255, 196, 0);
-  }
-}
-
-.tab-list-item {
-  display: inline-block;
-  list-style: none;
-  margin-bottom: -1px;
-  padding: 0.5rem 0.75rem;
-}
-
-.tab-list-active {
-  background-color: #fff;
-  border-left: $border-stroke;
-  border-right: 1px solid #fff;
-}
-
-.shipment-from-to {
-  width: 60%;
-  margin-right: 5%;
-  border-bottom: $border-stroke;
-}
-
-.shipment-single-map {
-  margin-top: 15px;
-  width: 280px;
-  height: 280px;
-}
-
-.shipment-single {
-  width: 100%;
-  height: 100vh;
-
-  .shipment-single-container {
-    margin: 60px 0 0 60px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    height: 100vh;
-
-    .shipment-single-cities {
-      font-size: 17px;
-      font-weight: 500;
-      color: $dark-gray;
-      padding-bottom: 20px;
-
-      span {
-        color: $light-gray;
-        margin: 0 10px 0 10px;
-      }
-    }
-
-    .shipment-single-section {
-      &:nth-child(odd) {
-        border-bottom: $border-stroke;
-      }
-
-      .shipment-single-wrapper {
-        display: flex;
-        width: 100%;
-
-        .shipment-single-number {
-          margin: 39px 10px 0 0;
-          color: $white;
-          border-radius: 50%;
-          height: 15px;
-          width: 17px;
-          font-size: 13px;
-          text-align: center;
-          padding: 2px;
-          background-color: $dark-gray;
-        }
-
-        .shipment-single-pickup-delivery {
-          padding: 20px 0;
-
-          p {
-            line-height: 20px;
-            &:first-child {
-              text-transform: uppercase;
-              color: $light-gray;
-              font-size: 13px;
-            }
-            &:nth-child(2) {
-              color: $dark-gray;
-              font-size: 15px;
-              font-weight: 500;
-            }
-            &:nth-child(3) {
-              color: $light-gray;
-              font-size: 13px;
-            }
-          }
-
-          ul {
-            display: flex;
-            width: 35%;
-
-            li {
-              margin-top: 10px;
-              margin-right: 10px;
-              img {
-                display: block;
-                margin: 0 auto;
-              }
-
-              .accessorial {
-                color: $dark-gray;
-                font-size: 12px;
-              }
-            }
-          }
-        }
-
-        .shipment-single-pickup-delivery1 {
-          border-bottom: $border-stroke;
-        }
-      }
-    }
-
-    .shipment-single-routes {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      justify-content: space-between;
-    }
-
-    .shipment-single-content {
-      width: 100%;
-    }
-
-    li {
-      list-style-type: none;
-    }
-
-    .shipment-single-icon:not(:last-child) {
-      width: 20px;
-    }
-  }
 }
 
 @media all and (min-width: 768px) {

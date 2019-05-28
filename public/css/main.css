@@ -176,25 +176,6 @@
         color: #14d64d;
         font-weight: 700; } }
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-  text-rendering: optimizeLegibility; }
-
-body {
-  font-family: "Roboto", serif;
-  overflow-y: hidden; }
-
-.main {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1280px; }
-
 .shipments-tabs {
   width: 100%; }
   .shipments-tabs .shipments-list {
@@ -260,47 +241,13 @@ body {
       border-left: 1px solid #c5c5c5;
       border-right: 1px solid #fff; }
 
-.shipment-single-specs {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px 0; }
-  .shipment-single-specs .equipment {
-    font-size: 14px;
-    position: relative;
-    top: -8px;
-    color: rgba(65, 65, 65, 0.9); }
-    .shipment-single-specs .equipment img {
-      position: relative;
-      top: 8px;
-      width: 28px; }
-  .shipment-single-specs .description {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #8d8d8d; }
-  .shipment-single-specs .ratings {
-    display: flex;
-    flex-direction: row; }
-  .shipment-single-specs .values {
-    color: rgba(65, 65, 65, 0.9);
-    font-weight: 500;
-    font-size: 13px; }
-  .shipment-single-specs .stars {
-    margin-right: 4px;
-    position: relative;
-    top: 3px;
-    color: #ffc400; }
+@media all and (min-width: 768px) {
+  .shipments-tabs {
+    width: 40%; } }
 
-.tab-list-item {
-  display: inline-block;
-  list-style: none;
-  margin-bottom: -1px;
-  padding: 0.5rem 0.75rem; }
-
-.tab-list-active {
-  background-color: #fff;
-  border-left: 1px solid #c5c5c5;
-  border-right: 1px solid #fff; }
+@media all and (min-width: 1024px) {
+  .shipments-tabs {
+    width: 40%; } }
 
 .shipment-from-to {
   width: 60%;
@@ -384,6 +331,67 @@ body {
       list-style-type: none; }
     .shipment-single .shipment-single-container .shipment-single-icon:not(:last-child) {
       width: 20px; }
+
+@media all and (min-width: 768px) {
+  .shipment-single {
+    width: 60%; }
+    .shipment-single .shipment-single-container {
+      margin: 60px 0 0 30px; } }
+
+.shipment-single-specs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0; }
+  .shipment-single-specs .equipment {
+    font-size: 14px;
+    position: relative;
+    top: -8px;
+    color: rgba(65, 65, 65, 0.9); }
+    .shipment-single-specs .equipment img {
+      position: relative;
+      top: 8px;
+      width: 28px; }
+  .shipment-single-specs .description {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #8d8d8d; }
+  .shipment-single-specs .ratings {
+    display: flex;
+    flex-direction: row; }
+  .shipment-single-specs .values {
+    color: rgba(65, 65, 65, 0.9);
+    font-weight: 500;
+    font-size: 13px; }
+  .shipment-single-specs .stars {
+    margin-right: 4px;
+    position: relative;
+    top: 3px;
+    color: #ffc400; }
+
+@media all and (min-width: 1024px) {
+  .shipment-single {
+    width: 60%; }
+    .shipment-single .shipment-single-container {
+      margin-left: 60px; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body {
+  font-family: "Roboto", serif;
+  overflow-y: hidden; }
+
+.main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1280px; }
 
 @media all and (min-width: 768px) {
   .main {
