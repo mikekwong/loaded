@@ -1,4 +1,4 @@
-## Available Scripts
+# Available Scripts
 
 ### `npm install`
 
@@ -29,24 +29,24 @@ You can re-compile the sass file if needed into a web-friendly CSS file if there
 See [Sass-lang](https://sass-lang.com) for more information.
 See [Node-Sass](https://github.com/sass/node-sass) for more information.<br>
 
-## Resources for other libraries in project
+# Resources for other libraries in project
 
 ### `Using React Router`
 
 React Router is the standard routing library for React. React Router keeps your UI in sync with the URL. It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling built right in.<br>
 See [Quick Start](https://reacttraining.com/react-router/web/guides/quick-start) for more information on installation, customization, and use.
 
-# `Using Axios`
+### `Using Axios`
 
 Documentation for utilizing Axios library. A Promise based HTTP client for the browser and node.js.<br>
 See [Axios](https://github.com/axios/axios) for more information on installation, customization, and use.
 
-# `Using Hamburgers`
+### `Using Hamburgers`
 
 CSS-animated hamburgers for mobile view. Can be installed as a node package to be implemented into Sass or imported as a CSS stylesheet link.<br>
 See [Hamburgers](https://jonsuh.com/hamburgers/) for more information on installation, customization, and use.
 
-# `Using React Star Ratings`
+### `Using React Star Ratings`
 
 Customizable react star ratings. SVG stars that show aggregate star ratings to the hundredths decimal point.<br>
 See [React Star Ratings](https://github.com/ekeric13/react-star-ratings) for more information on installation, customization, and use.
