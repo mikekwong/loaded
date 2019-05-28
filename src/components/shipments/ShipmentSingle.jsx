@@ -75,6 +75,8 @@ export default class ShipmentSingle extends Component {
                     number={1}
                     type={'Pick-Up'}
                     pickupDelivery={stops[0]}
+                    startTime={stops[0].windowStart}
+                    endTime={stops[0].windowEnd}
                     icon1={palletJack}
                     icon2={airport}
                     firstIconName={stops[0].accessorials[0]}
@@ -84,6 +86,8 @@ export default class ShipmentSingle extends Component {
                     number={2}
                     type={'Delivery'}
                     pickupDelivery={stops[1]}
+                    startTime={stops[1].windowStart}
+                    endTime={stops[1].windowEnd}
                     icon1={lumper}
                     icon2={liftGate}
                     firstIconName={stops[1].accessorials[0]}

@@ -72,6 +72,11 @@
             &:nth-child(3) {
               color: $light-gray;
               font-size: 13px;
+
+              span {
+                margin-left: 8px;
+                font-size: 12px;
+              }
             }
           }
 
@@ -167,6 +172,7 @@
     font-weight: 500;
     font-size: 13px;
   }
+
   .stars {
     margin-right: 4px;
     position: relative;

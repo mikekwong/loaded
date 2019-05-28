@@ -304,6 +304,9 @@
           .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery p:nth-child(3) {
             color: #8d8d8d;
             font-size: 13px; }
+            .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery p:nth-child(3) span {
+              margin-left: 8px;
+              font-size: 12px; }
         .shipment-single .shipment-single-container .shipment-single-section .shipment-single-wrapper .shipment-single-pickup-delivery ul {
           display: flex;
           width: 35%; }

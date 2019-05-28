@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { convertDate, formatAccessorial } from '../../utils'
+import { convertDate, convertTime, formatAccessorial } from '../../utils'
 
 const ShipmentFromTo = ({
   number,
   pickupDelivery,
   type,
+  startTime,
+  endTime,
   icon1,
   icon2,
   firstIconName,
@@ -23,7 +25,12 @@ const ShipmentFromTo = ({
         <p>
           {pickupDelivery.city}, {pickupDelivery.state} {pickupDelivery.zipcode}
         </p>
-        <p>{convertDate(pickupDelivery.windowStart)}</p>
+        <p>
+          {convertDate(pickupDelivery.windowStart)}{' '}
+          <span>
+            {convertTime(startTime)} - {convertTime(endTime)}
+          </span>
+        </p>
         <ul>
           <li>
             <img

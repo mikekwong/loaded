@@ -45,3 +45,8 @@ export const convertDate = dateInput => {
 
   return `${day}, ${date} ${month}, ${year}`
 }
+
+export const convertTime = input => {
+  var armyTime = new Date(input)
+  return `${armyTime.getUTCHours()}:${armyTime.getUTCMinutes()}${armyTime.getUTCSeconds()}`
+}
