@@ -16,8 +16,7 @@ export default class ShipmentSingle extends Component {
     this.state = {
       isLoading: true,
       error: null,
-      shipmentDetails: [],
-      stops: []
+      shipmentDetails: []
     }
   }
 
@@ -27,7 +26,6 @@ export default class ShipmentSingle extends Component {
       const { data } = await loadSmart.get(`shipment-${id}.json`)
       this.setState({
         shipmentDetails: data,
-        stops: data.stops,
         isLoading: false
       })
     } catch (error) {
@@ -62,7 +60,7 @@ export default class ShipmentSingle extends Component {
     return (
       <div className='shipment-single'>
         <div className='shipment-single-container'>
-          {!this.state.isLoading && this.state.stops ? (
+          {!this.state.isLoading ? (
             <>
               <div className='shipment-single-section shipment-single-cities'>
                 <p>
@@ -80,7 +78,7 @@ export default class ShipmentSingle extends Component {
                     icon1={palletJack}
                     icon2={airport}
                     firstIconName={stops[0].accessorials[0]}
-                    secondIconName={this.state.stops[0].accessorials[1]}
+                    secondIconName={stops[0].accessorials[1]}
                   />
                   <ShipmentFromTo
                     number={'2'}
@@ -89,7 +87,7 @@ export default class ShipmentSingle extends Component {
                     icon1={lumper}
                     icon2={liftGate}
                     firstIconName={stops[1].accessorials[0]}
-                    secondIconName={this.state.stops[1].accessorials[1]}
+                    secondIconName={stops[1].accessorials[1]}
                   />
                 </div>
                 <img className='shipment-single-map' alt='map' src={map} />
