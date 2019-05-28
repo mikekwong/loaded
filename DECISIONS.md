@@ -42,7 +42,7 @@ Fetching external API from within React to populate data for components.
 
 ## Decision
 
-I needed an easy to use library that's well known and commonly used in the industry to do an AJAX request to Fetch back JSON objects as content for the loadsmart shipment web platform. I could've done it natively using the native JS Fetch API but opted not to to speed up development time since axios is so easy to use and has a lot of community support and documentation. Plus with the native Fetch API, there is more minutia in code details that could easily cause bugs in development.
+I needed a promise based HTTP client for the browser and node.js to perform AJAX requests to Fetch back JSON as content for the loadsmart shipment web platform. I could've done it natively using the native JS Fetch API but opted not to to speed up development time since axios is so easy to use and has a lot of community support and documentation. Plus with the native Fetch API, there is more minutia in code details that could easily cause bugs in development.
 
 # React Router DOM library
 
