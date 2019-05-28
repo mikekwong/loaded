@@ -56,4 +56,4 @@ TDD for React components
 
 ## Decision
 
-Commonly used and well documented tools in the industry for React testing. These tools were used to write tests for React components to ensure certain html tags existed and proper components were being imported and used within components.
+Commonly used and well documented tools in the industry for React testing. These tools were used to write unit tests for the React components to ensure certain html tags existed, proper components, were being imported and used within components even before running the project in development/production build. To determine if a test case passes or fails.
