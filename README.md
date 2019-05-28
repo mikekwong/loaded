@@ -23,4 +23,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run sass`
 
-You can re-compile the sass file if needed into a web-friendly CSS file if there are any edits made to source sass file.<br>
+You can re-compile the sass file if needed into a web-friendly CSS file if there are any edits made to source sass file. You'll need to hard refresh your web browser to see any new style changes if you've generated a new CSS file.<br>
