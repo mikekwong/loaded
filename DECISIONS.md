@@ -2,7 +2,7 @@
 
 ## Context
 
-Architected React project to be composable with reuseable components for modularity and separation of concerns.
+React project needed to be scalable, brevity, modularity, and separation of concerns.
 
 ## Decision
 
@@ -34,7 +34,7 @@ Styling components for platform.
 
 I wanted the ability to utilize variables for styling presets, color values, and be able to nest selectors depending where they were located in the DOM tree without having to repeat myself and keep code DRY, maintainable, easy to read, and easy to change (particularly with preset variables).
 
-# AXIOS library
+# Axios library
 
 ## Context
 
@@ -54,7 +54,7 @@ Needed to implement different routes for dynamic shipment details display
 
 React router dom is a common library for this use case if I have many different route endpoints to visit. Particularly I can target a specific component for a specific route and pass in route IDs (in this case) as an endpoint and ID of json object for the AJAX get request.
 
-# HAMBURGERS library
+# Hamburgers library
 
 ## Context
 
