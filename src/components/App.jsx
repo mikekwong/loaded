@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Logistics from './Logistics'
-import ShipmentSingle from './ShipmentSingle'
-import Navbar from './Navbar'
+import Logistics from './shipments/Logistics'
+import ShipmentSingle from './shipments/ShipmentSingle'
+import Navbar from './navigation/Navbar'
 
 const App = () => {
   return (

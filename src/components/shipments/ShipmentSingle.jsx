@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import StarRatings from 'react-star-ratings'
 import ShipmentFromTo from './ShipmentFromTo'
-import loadSmart from '../api/loadSmart'
-import { addCommas } from '../utils'
+import loadSmart from '../../api/loadSmart'
+import { addCommas } from '../../utils'
 
-import palletJack from '../icons/icon_accessorial_pallet_jack.svg'
-import airport from '../icons/icon_accessorial_airport.svg'
-import lumper from '../icons/icon_accessorial_lumper.svg'
-import liftGate from '../icons/icon_accessorial_lift_gate.svg'
-import dryVan from '../icons/icon_truck_dryvan.svg'
+import palletJack from '../../icons/icon_accessorial_pallet_jack.svg'
+import airport from '../../icons/icon_accessorial_airport.svg'
+import lumper from '../../icons/icon_accessorial_lumper.svg'
+import liftGate from '../../icons/icon_accessorial_lift_gate.svg'
+import dryVan from '../../icons/icon_truck_dryvan.svg'
 
 export default class ShipmentSingle extends Component {
   constructor () {

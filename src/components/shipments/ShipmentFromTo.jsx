@@ -1,5 +1,5 @@
 import React from 'react'
-import { convertDate, formatAccessorial } from '../utils'
+import { convertDate, formatAccessorial } from '../../utils'
 
 const PickupDelivery = ({
   number,

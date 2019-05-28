@@ -6,10 +6,10 @@ export default class shipTab extends Component {
     onClick(label)
   }
 
-  render() {
+  render () {
     const {
       onClick,
-      props: { activeTab, label },
+      props: { activeTab, label }
     } = this
 
     let className = 'shipments-list-container'

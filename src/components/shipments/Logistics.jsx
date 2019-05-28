@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Shipments from './Shipments'
 import ShipTabs from './ShipTabs'
 
-import loadSmart from '../api/loadSmart'
+import loadSmart from '../../api/loadSmart'
 import { Link } from 'react-router-dom'
 
 // import shipments from '../json/shipments'
@@ -12,7 +12,7 @@ export default class App extends Component {
     super()
     this.state = {
       isLoading: true,
-      error: null,
+      error: false,
       shipments: []
     }
   }
@@ -47,7 +47,6 @@ export default class App extends Component {
                     label={
                       <Link to={`/shipment/${shipment.id}`}>
                         <Shipments
-                          // shipmentDetail={() => this.shipmentDetail()}
                           active={this.state.active}
                           key={shipment.id}
                           {...shipment}

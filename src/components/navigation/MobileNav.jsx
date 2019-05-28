@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../icons/logo.svg'
+import logo from '../../icons/logo.svg'
 
 export default class MobileNav extends Component {
   constructor () {

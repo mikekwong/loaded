@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../icons/logo.svg'
 import MobileNav from './MobileNav'
+import logo from '../../icons/logo.svg'
 
 const Navbar = () => {
   return (
