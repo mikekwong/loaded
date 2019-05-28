@@ -7,12 +7,14 @@ import ShipmentSingle from './shipments/ShipmentSingle'
 const App = () => {
   return (
     <Router>
-      <nav className='nav'>
-        <Navbar />
-      </nav>
-      <div className='main'>
-        <Logistics />
-        <Route path='/shipment/:id' component={ShipmentSingle} />
+      <div>
+        <nav className='nav'>
+          <Navbar />
+        </nav>
+        <div className='main'>
+          <Logistics />
+          <Route path='/shipment/:id' component={ShipmentSingle} />
+        </div>
       </div>
     </Router>
   )

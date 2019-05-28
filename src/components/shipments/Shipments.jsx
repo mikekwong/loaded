@@ -6,7 +6,7 @@ import dryVan from '../../icons/icon_truck_dryvan.svg'
 
 const Shipments = ({ active, fare, equipmentType, equipmentSize, stops }) => {
   return (
-    <>
+    <div>
       <ul className='shipments-list-equipment'>
         <li className='shipments-list-equipment-item'>
           <img className='dryvan' alt={equipmentType} src={dryVan} />{' '}
@@ -21,7 +21,7 @@ const Shipments = ({ active, fare, equipmentType, equipmentSize, stops }) => {
         <div className='shipments-list-route shipments-list-arrow'>></div>
         <ShipmentsFromTo stops={stops[1]} />
       </div>
-    </>
+    </div>
   )
 }
 
